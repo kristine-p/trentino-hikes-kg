@@ -1,0 +1,17 @@
+# LaTeX build files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.xdv
+Documentation/report/main.pdf
+# Python / OS
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+.DS_Store

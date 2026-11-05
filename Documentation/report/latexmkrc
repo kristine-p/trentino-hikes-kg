@@ -1,0 +1,2 @@
+# The knowdive class uses fontspec, so the report must be built with XeLaTeX.
+$pdf_mode = 5;
