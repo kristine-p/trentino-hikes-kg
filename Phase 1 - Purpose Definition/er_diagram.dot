@@ -1,0 +1,95 @@
+digraph ER {
+  graph [rankdir=LR, splines=true, nodesep=0.45, ranksep=0.9, fontname="Helvetica", pad=0.3];
+  node  [shape=plain, fontname="Helvetica", fontsize=10];
+  edge  [fontname="Helvetica", fontsize=9, color="#555555", arrowsize=0.7];
+
+  // ---------- helper macro style: header colour by category ----------
+  // core = blue, common = red, contextual = green (same convention as the example report)
+
+  Trail [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
+    <tr><td bgcolor="#3B6FB6"><font color="white"><b>Trail</b></font></td></tr>
+    <tr><td align="left">trailId (SAT ref)<br align="left"/>name<br align="left"/>lengthKm<br align="left"/>durationMin<br align="left"/>ascentM<br align="left"/>descentM<br align="left"/>maxAltitudeM<br align="left"/>osmRelationId<br align="left"/></td></tr></table>>];
+
+  Trailhead [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
+    <tr><td bgcolor="#3B6FB6"><font color="white"><b>Trailhead</b></font></td></tr>
+    <tr><td align="left">trailheadId<br align="left"/>name<br align="left"/>latitude<br align="left"/>longitude<br align="left"/>altitudeM<br align="left"/></td></tr></table>>];
+
+  DifficultyLevel [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
+    <tr><td bgcolor="#3B6FB6"><font color="white"><b>DifficultyLevel</b></font></td></tr>
+    <tr><td align="left">code (T/E/EE/EEA)<br align="left"/>name<br align="left"/>description<br align="left"/></td></tr></table>>];
+
+  ExperienceLevel [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
+    <tr><td bgcolor="#3B6FB6"><font color="white"><b>ExperienceLevel</b></font></td></tr>
+    <tr><td align="left">name<br align="left"/>description<br align="left"/></td></tr></table>>];
+
+  InclineCategory [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
+    <tr><td bgcolor="#3B6FB6"><font color="white"><b>InclineCategory</b></font></td></tr>
+    <tr><td align="left">name (gentle/moderate/steep)<br align="left"/>maxAscentM<br align="left"/>maxAscentPerKm<br align="left"/></td></tr></table>>];
+
+  Equipment [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
+    <tr><td bgcolor="#3B6FB6"><font color="white"><b>Equipment</b></font></td></tr>
+    <tr><td align="left">name<br align="left"/>category (gear/clothing)<br align="left"/>description<br align="left"/>source<br align="left"/></td></tr></table>>];
+
+  Municipality [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
+    <tr><td bgcolor="#C0392B"><font color="white"><b>Municipality</b></font></td></tr>
+    <tr><td align="left">name<br align="left"/>istatCode<br align="left"/>altitudeM<br align="left"/></td></tr></table>>];
+
+  CarPark [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
+    <tr><td bgcolor="#C0392B"><font color="white"><b>CarPark</b></font></td></tr>
+    <tr><td align="left">carParkId<br align="left"/>name<br align="left"/>latitude<br align="left"/>longitude<br align="left"/>capacity<br align="left"/>fee<br align="left"/></td></tr></table>>];
+
+  TransportStop [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
+    <tr><td bgcolor="#C0392B"><font color="white"><b>TransportStop</b></font></td></tr>
+    <tr><td align="left">stopId<br align="left"/>name<br align="left"/>latitude<br align="left"/>longitude<br align="left"/></td></tr></table>>];
+
+  TransitLine [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
+    <tr><td bgcolor="#C0392B"><font color="white"><b>TransitLine</b></font></td></tr>
+    <tr><td align="left">routeId<br align="left"/>shortName<br align="left"/>longName<br align="left"/>mode (bus/rail)<br align="left"/></td></tr></table>>];
+
+  PointOfInterest [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
+    <tr><td bgcolor="#C0392B"><font color="white"><b>PointOfInterest</b></font></td></tr>
+    <tr><td align="left">poiId<br align="left"/>name<br align="left"/>poiType (hut/restaurant/lake/peak/...)<br align="left"/>latitude<br align="left"/>longitude<br align="left"/>altitudeM<br align="left"/>openingHours<br align="left"/></td></tr></table>>];
+
+  Lift [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
+    <tr><td bgcolor="#C0392B"><font color="white"><b>Lift</b></font></td></tr>
+    <tr><td align="left">liftId<br align="left"/>name<br align="left"/>liftType (cable car/gondola/chair)<br align="left"/>bottomAltitudeM<br align="left"/>topAltitudeM<br align="left"/>topLatitude<br align="left"/>topLongitude<br align="left"/></td></tr></table>>];
+
+  WeatherStation [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
+    <tr><td bgcolor="#2E8B57"><font color="white"><b>WeatherStation</b></font></td></tr>
+    <tr><td align="left">stationCode<br align="left"/>name<br align="left"/>stationType (weather/snow)<br align="left"/>latitude<br align="left"/>longitude<br align="left"/>altitudeM<br align="left"/></td></tr></table>>];
+
+  DailyObservation [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
+    <tr><td bgcolor="#2E8B57"><font color="white"><b>DailyObservation</b></font></td></tr>
+    <tr><td align="left">date<br align="left"/>precipitationMm<br align="left"/>tempMinC<br align="left"/>tempMaxC<br align="left"/>snowDepthCm<br align="left"/>freshSnowCm<br align="left"/></td></tr></table>>];
+
+  WeatherForecast [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
+    <tr><td bgcolor="#2E8B57"><font color="white"><b>WeatherForecast</b></font></td></tr>
+    <tr><td align="left">forecastDate<br align="left"/>issueDate<br align="left"/>tempMinC<br align="left"/>tempMaxC<br align="left"/>precipProbability<br align="left"/>description<br align="left"/></td></tr></table>>];
+
+  HikingCondition [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
+    <tr><td bgcolor="#2E8B57"><font color="white"><b>HikingCondition</b></font></td></tr>
+    <tr><td align="left">name (e.g. recent heavy rain)<br align="left"/>variable<br align="left"/>operator<br align="left"/>threshold<br align="left"/>windowDays<br align="left"/></td></tr></table>>];
+
+  // ---------- relationships ----------
+  Trail -> DifficultyLevel   [label="hasDifficulty"];
+  Trail -> InclineCategory   [label="hasInclineCategory"];
+  ExperienceLevel -> DifficultyLevel [label="suitableFor"];
+  Trail -> Trailhead         [label="startsAt"];
+  Trail -> Trailhead         [label="endsAt"];
+  Trail -> PointOfInterest   [label="passesNear"];
+  Trail -> WeatherStation    [label="nearestWeatherStation"];
+  Trail -> WeatherStation    [label="nearestSnowStation"];
+  Trailhead -> Municipality  [label="locatedIn"];
+  Trailhead -> CarPark       [label="nearCarPark"];
+  Trailhead -> TransportStop [label="nearStop"];
+  TransportStop -> TransitLine [label="servedBy"];
+  Lift -> Trailhead          [label="topStationNear"];
+  DailyObservation -> WeatherStation [label="observedAt"];
+  WeatherForecast -> Municipality    [label="forecastFor"];
+  DifficultyLevel -> Equipment [label="requiresEquipment"];
+  HikingCondition -> Equipment [label="recommendsEquipment"];
+
+  // ---------- legend ----------
+  legend [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+    <tr><td bgcolor="#3B6FB6"><font color="white">Core</font></td><td bgcolor="#C0392B"><font color="white">Common</font></td><td bgcolor="#2E8B57"><font color="white">Contextual</font></td></tr></table>>];
+}

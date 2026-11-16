@@ -1,9 +1,58 @@
 \section{Project Design}
 
-This section has to report and describe:
+\subsection{Domain of Interest}
+\label{sec:domain}
+The domain of interest is hiking in Trentino: the official hiking trails together with everything a hiker needs to reach, complete and prepare for them. It is delimited by geographical, temporal and domain boundaries.
+
+\subsubsection{Geographical Boundaries}
+The spatial scope is \textbf{Trentino}, i.e.\ the Autonomous Province of Trento, considered in its entirety. South Tyrol (the Autonomous Province of Bolzano), which together with Trentino forms the region Trentino-Alto Adige/Südtirol, is excluded. Within this territory the KG covers the official SAT trail network and, around it, the trail starting points, car parks, mountain huts and restaurants, other points of interest, cable cars and lifts, public transport stops and lines, and the weather and snow measuring stations of Meteotrentino.
+
+\subsubsection{Temporal Boundaries}
+All time-dependent information is computed relative to a \textbf{reference date}, which plays the role of ``today''.
 \begin{itemize}
-    \item The \textbf{broad definition} of the KG project's Domain of Interest, by defining its boundaries in space and time. The definition of the domain of interest is crucial to set the space and time boundaries of the project purpose. The domain of interest description informs the reader about the geographical space, as well as the period of time, in which the project purpose is considered. 
-
-    \item The \textbf{broad definition} of the KG project's general purpose, by reporting the main purpose as expressed by the final user. The description of the purpose in this section is an "informal" description, meaning by this that it is expressed by using a natural language paragraph, which need to be exploited, have not yet been identified. 
-
+    \item \textbf{Recent conditions}: the daily weather and snow measurements of the seven days preceding the reference date. Seven days are enough to tell whether a trail is likely to be muddy, wet or covered in snow.
+    \item \textbf{Forecast}: the weather forecast for the day of the hike, which can be the reference date itself or one of the following days. The aim is to cover up to seven days ahead, so that a hike can be planned a week in advance; how many days the official forecast actually covers is verified during information gathering.
+    \item \textbf{Trails, points of interest, lifts and car parks}: downloaded from OpenStreetMap once, on a fixed date, and the KG is built from that copy. This keeps the results stable during the project and allows the report to state exactly which version of the data was used; these entities change very little over a few months.
 \end{itemize}
+
+\noindent The same build process is executed in two modes (Table~\ref{tab:modes}).
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}p{2.4cm}|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Mode} & \textbf{Reference date} & \textbf{Weather used} & \textbf{Purpose} \\ \hline
+Live mode & The current date (November--December 2026) & Measurements and forecast published by Meteotrentino & Shows that the KG works on current data. \\ \hline
+Presentation scenario & A Saturday in late June 2026 & Historical measurements; the weather observed on the following days is used in place of the forecast, since past forecasts are not published. Synthetic data is used only where a dataset has gaps, and is labelled as such. & The project runs outside the hiking season, when most lifts and huts are closed; a summer date makes every competency question meaningful. The resulting KG is frozen so that the reported results can be reproduced. \\ \hline
+\end{tabularx}
+\captionof{table}{Run modes of the KG.}
+\label{tab:modes}
+\end{center}
+
+\subsubsection{Domain Boundaries}
+The KG covers hiking on the official, signposted SAT trails, on foot, as a day trip. The following are outside the scope of the project:
+\begin{itemize}
+    \item other mountain activities, such as climbing, ski touring and mountain biking (via ferrata routes appear only as trails of the highest difficulty level, with the equipment they require);
+    \item multi-day treks and the booking of accommodation;
+    \item turn-by-turn navigation along a trail;
+    \item real-time information, such as trail closures or how busy a car park is.
+\end{itemize}
+
+\noindent Some aspects close to the purpose are left out of the current scope and recorded as future improvements:
+\begin{itemize}
+    \item \textbf{Opening hours of huts and restaurants.} Many of them close after lunch. The KG could give the time by which the user has to reach a restaurant, or show its opening hours together with the walking time to it, so that the user can decide whether they can make it.
+    \item \textbf{Paying for parking.} Whether a car park is free or paid and how to pay: cash, card or a parking app, and which app is needed.
+    \item \textbf{Tickets for public transport.} Where to buy a ticket, whether an app, card or cash is accepted, and whether tickets can be bought on board.
+    \item \textbf{Getting back.} Reaching a trail by public transport is only half of the trip. The KG could check, from the duration of the hike and the timetable, when the last connection back leaves and whether the user can return on the same day.
+\end{itemize}
+
+\subsection{Informal Purpose}
+\label{sec:informal-purpose}
+The purpose of the project, as expressed by the final user, is:
+
+\begin{quote}
+\emph{``A service that helps hikers in Trentino, especially inexperienced ones, to find trails that suit them, and tells them how to get there, how long the hike takes, where to eat, what to wear and bring, and whether recent weather calls for caution.''}
+\end{quote}
+
+\noindent A user describes themselves in plain terms (their experience, whether they mind steep climbs, whether they travel by car or by public transport) and obtains suitable trails, without having to know the official difficulty scale. For each suitable trail the KG provides its duration, length, ascent and descent (the total metres climbed and descended); where it starts; parking options or how to reach it by public transport; the huts or restaurants along the way, or the advice to pack lunch; the possibility of taking a cable car or lift up and hiking mostly downhill; the equipment and clothing required, given the trail's difficulty, the forecast and the altitude; and a warning when there has recently been heavy rain or snow near the trail. Experienced hikers can use the same KG to find trails matching their level and choose the maximum ascent and duration they want.
