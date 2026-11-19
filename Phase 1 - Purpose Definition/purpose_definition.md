@@ -113,6 +113,19 @@ Next step: information gathering (look at each dataset's fields and completeness
 - Future improvements (opening hours, paying for parking, public transport tickets, getting back) are listed under the domain boundaries in Section 2.
 - Persona details added for the L15 format (sex, occupation, education, home town) are placeholders the team can change.
 
+## Review notes and decisions (17–18 Nov 2026)
+Coursemate's review of sections 1–3:
+1. Difficulty scale: the text sounded as if T/E/EE/EEA "don't help". Clarified: the scale is the basis of the recommendations (difficulty → equipment); the KG shows each level with a plain-language explanation. Introduction already changed in Overleaf (scale "tells an experienced hiker at a glance what a trail demands … but the letters mean little to a beginner"; third paragraph: "the KG uses the difficulty scale as the basis of its recommendations … and explains each level in plain language"). Still to align: 2.2 Informal Purpose, scenario S1, 3.1.4 Concepts, design choices, 3.3.
+2. "Let people choose their own starting point": two readings – (a) where the user travels from (already CQ3 "near me"; wording to clarify) or (b) where on the trail they start (SAT trails are segments: either direction, intermediate access points, loops). Ask the coursemate which one; (b) to be decided after seeing how OSM splits SAT trails.
+
+Getting back (decided 18 Nov 2026) – the trail must also allow the user to return:
+- By car, the trail end must offer one of: (a) loop, ends at the start; (b) end near the same car park; (c) lift from the end back down towards the car park; (d) bus stop with a line that also stops near the car park; (e) out and back – walk back the same way, duration doubled (simplest, always possible).
+- By public transport: Trento is the only origin/destination for now (limitation). Start near a stop on a line from Trento; end near a stop on a line back to Trento.
+- Timetables / last connection back stay a future improvement; for now only the existence of a line counts.
+- Lines are assumed to run in both directions; check against the GTFS data.
+Model changes needed: Trail + isLoop and out-and-back duration (derived); Lift + bottom station location and bottomStationNear → CarPark; TransportStop + locatedIn → Municipality. CQ7 → "where do I park, and how do I get back to my car at the end?"; CQ8 → "how do I get there from Trento, and back?". Update scenario S2, Sofia, Jonas, entity/relationship tables, ER diagram, PFsheet, and move "getting back" (without timetables) from future improvements into scope.
+Applied on 18 Nov 2026 to S2.tex, S3.tex, er_diagram (now 19 relationships) and PFsheet.xlsx, together with the difficulty-scale wording in 2.2, S1 scenario, 3.1.4, design choices and 3.3.
+
 ## Purpose evolution (for the qualitative evaluation)
 - Scenarios: 5 → 6 (car/public transport, gear and clothing, lifts added)
 - Personas: 4 → 5 (Jonas, no car, added; Sofia is the main persona)

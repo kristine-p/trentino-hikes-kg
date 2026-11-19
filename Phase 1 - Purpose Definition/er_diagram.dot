@@ -8,7 +8,7 @@ digraph ER {
 
   Trail [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
     <tr><td bgcolor="#3B6FB6"><font color="white"><b>Trail</b></font></td></tr>
-    <tr><td align="left">trailId (SAT ref)<br align="left"/>name<br align="left"/>lengthKm<br align="left"/>durationMin<br align="left"/>ascentM<br align="left"/>descentM<br align="left"/>maxAltitudeM<br align="left"/>osmRelationId<br align="left"/></td></tr></table>>];
+    <tr><td align="left">trailId (SAT ref)<br align="left"/>name<br align="left"/>lengthKm<br align="left"/>durationMin<br align="left"/>ascentM<br align="left"/>descentM<br align="left"/>maxAltitudeM<br align="left"/>isLoop<br align="left"/>outAndBackDurationMin<br align="left"/>osmRelationId<br align="left"/></td></tr></table>>];
 
   Trailhead [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
     <tr><td bgcolor="#3B6FB6"><font color="white"><b>Trailhead</b></font></td></tr>
@@ -52,7 +52,7 @@ digraph ER {
 
   Lift [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
     <tr><td bgcolor="#C0392B"><font color="white"><b>Lift</b></font></td></tr>
-    <tr><td align="left">liftId<br align="left"/>name<br align="left"/>liftType (cable car/gondola/chair)<br align="left"/>bottomAltitudeM<br align="left"/>topAltitudeM<br align="left"/>topLatitude<br align="left"/>topLongitude<br align="left"/></td></tr></table>>];
+    <tr><td align="left">liftId<br align="left"/>name<br align="left"/>liftType (cable car/gondola/chair)<br align="left"/>bottomAltitudeM<br align="left"/>topAltitudeM<br align="left"/>bottomLatitude<br align="left"/>bottomLongitude<br align="left"/>topLatitude<br align="left"/>topLongitude<br align="left"/></td></tr></table>>];
 
   WeatherStation [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="3">
     <tr><td bgcolor="#2E8B57"><font color="white"><b>WeatherStation</b></font></td></tr>
@@ -84,6 +84,8 @@ digraph ER {
   Trailhead -> TransportStop [label="nearStop"];
   TransportStop -> TransitLine [label="servedBy"];
   Lift -> Trailhead          [label="topStationNear"];
+  Lift -> CarPark            [label="bottomStationNear"];
+  TransportStop -> Municipality [label="locatedIn"];
   DailyObservation -> WeatherStation [label="observedAt"];
   WeatherForecast -> Municipality    [label="forecastFor"];
   DifficultyLevel -> Equipment [label="requiresEquipment"];
