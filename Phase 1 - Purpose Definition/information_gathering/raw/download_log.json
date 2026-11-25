@@ -1,0 +1,1394 @@
+{
+  "osm_trails_sat.json": {
+    "url": "https://overpass.kumi.systems/api/interpreter",
+    "downloaded_at": "2026-11-25T07:44:22+00:00",
+    "bytes": 768919,
+    "note": "[out:json][timeout:180];area[\"ISO3166-2\"=\"IT-TN\"]->.a;relation[\"route\"=\"hiking\"][\"operator\"~\"Alpinisti Tridentini\"](area.a);out tags;"
+  },
+  "osm_poi.json": {
+    "url": "https://overpass-api.de/api/interpreter",
+    "downloaded_at": "2026-11-25T07:45:29+00:00",
+    "bytes": 1746508,
+    "note": "[out:json][timeout:180];area[\"ISO3166-2\"=\"IT-TN\"]->.a;(nwr[\"tourism\"~\"^(alpine_hut|wilderness_hut|viewpoint|attraction)$\"](area.a);nwr[\"amenity\"~\"^(restaurant|cafe|bar)$\"](area.a);node[\"natural\"=\"peak\"](area.a);nwr[\"water\"=\"lake\"](area.a););out tags center;"
+  },
+  "osm_parking.json": {
+    "url": "https://overpass-api.de/api/interpreter",
+    "downloaded_at": "2026-11-25T08:25:03+00:00",
+    "bytes": 2252106,
+    "note": "[out:json][timeout:180];area[\"ISO3166-2\"=\"IT-TN\"]->.a;nwr[\"amenity\"=\"parking\"](area.a);out tags center;"
+  },
+  "osm_lifts.json": {
+    "url": "https://overpass-api.de/api/interpreter",
+    "downloaded_at": "2026-11-25T07:52:19+00:00",
+    "bytes": 244100,
+    "note": "[out:json][timeout:180];area[\"ISO3166-2\"=\"IT-TN\"]->.a;way[\"aerialway\"~\"^(cable_car|gondola|chair_lift|mixed_lift)$\"](area.a);out geom;"
+  },
+  "osm_lift_stations.json": {
+    "url": "https://overpass-api.de/api/interpreter",
+    "downloaded_at": "2026-11-25T08:25:47+00:00",
+    "bytes": 74645,
+    "note": "[out:json][timeout:180];area[\"ISO3166-2\"=\"IT-TN\"]->.a;node[\"aerialway\"=\"station\"](area.a);out tags;"
+  },
+  "osm_municipalities.json": {
+    "url": "https://overpass-api.de/api/interpreter",
+    "downloaded_at": "2026-11-25T08:04:12+00:00",
+    "bytes": 81970,
+    "note": "[out:json][timeout:180];area[\"ISO3166-2\"=\"IT-TN\"]->.a;relation[\"boundary\"=\"administrative\"][\"admin_level\"=\"8\"](area.a);out tags center;"
+  },
+  "osm_bus_stops.json": {
+    "url": "https://overpass.kumi.systems/api/interpreter",
+    "downloaded_at": "2026-11-25T08:18:17+00:00",
+    "bytes": 880031,
+    "note": "[out:json][timeout:180];area[\"ISO3166-2\"=\"IT-TN\"]->.a;node[\"highway\"=\"bus_stop\"](area.a);out tags;"
+  },
+  "osm_trails_sat_geom.json": {
+    "url": "https://overpass-api.de/api/interpreter, https://overpass.kumi.systems/api/interpreter, https://overpass.private.coffee/api/interpreter",
+    "downloaded_at": "2026-11-25T10:19:01+00:00",
+    "bytes": 19269944,
+    "note": "[out:json][timeout:180];relation(id:<ids>);out skel geom; in batches of 100 ids from osm_trails_sat.json"
+  },
+  "gtfs_extraurbano.zip": {
+    "url": "https://www.trentinotrasporti.it/opendata/google_transit_extraurbano_tte.zip",
+    "downloaded_at": "2026-11-25T10:19:01+00:00",
+    "bytes": 11108124,
+    "note": ""
+  },
+  "gtfs_urbano.zip": {
+    "url": "https://www.trentinotrasporti.it/opendata/google_transit_urbano_tte.zip",
+    "downloaded_at": "2026-11-25T10:19:01+00:00",
+    "bytes": 1187073,
+    "note": ""
+  },
+  "meteo_stations.json": {
+    "url": "https://archivio.meteotrentino.it/share/catalog/stations.json",
+    "downloaded_at": "2026-11-25T10:19:02+00:00",
+    "bytes": 95314,
+    "note": ""
+  },
+  "meteo_variables.json": {
+    "url": "https://archivio.meteotrentino.it/share/catalog/variables.json",
+    "downloaded_at": "2026-11-25T10:19:02+00:00",
+    "bytes": 10034,
+    "note": ""
+  },
+  "meteo_summary.json": {
+    "url": "https://archivio.meteotrentino.it/share/catalog/summary.json",
+    "downloaded_at": "2026-11-25T10:19:02+00:00",
+    "bytes": 4417,
+    "note": ""
+  },
+  "meteo_quality_codes.json": {
+    "url": "https://archivio.meteotrentino.it/share/catalog/quality_codes.json",
+    "downloaded_at": "2026-11-25T10:19:02+00:00",
+    "bytes": 1926,
+    "note": ""
+  },
+  "meteo_daily_10.75.parquet": {
+    "url": "https://archivio.meteotrentino.it/share/aggregates/daily/10.75.v20261125T0300.parquet",
+    "downloaded_at": "2026-11-25T10:19:05+00:00",
+    "bytes": 8578862,
+    "note": "daily precipitation mm (09-09)"
+  },
+  "meteo_daily_400.75.parquet": {
+    "url": "https://archivio.meteotrentino.it/share/aggregates/daily/400.75.v20261125T0300.parquet",
+    "downloaded_at": "2026-11-25T10:19:08+00:00",
+    "bytes": 11022249,
+    "note": "daily minimum temperature C"
+  },
+  "meteo_daily_400.76.parquet": {
+    "url": "https://archivio.meteotrentino.it/share/aggregates/daily/400.76.v20261125T0300.parquet",
+    "downloaded_at": "2026-11-25T10:19:09+00:00",
+    "bytes": 11310450,
+    "note": "daily maximum temperature C"
+  },
+  "snow_fields.xml": {
+    "url": "https://dati.meteotrentino.it/service.asmx/listaCampiNeve",
+    "downloaded_at": "2026-11-25T10:19:10+00:00",
+    "bytes": 13100,
+    "note": ""
+  },
+  "snow_last7days.xml": {
+    "url": "https://dati.meteotrentino.it/service.asmx/tuttiUltimiRilieviNeve",
+    "downloaded_at": "2026-11-25T10:19:10+00:00",
+    "bytes": 16714,
+    "note": ""
+  },
+  "forecast/venues.json": {
+    "url": "https://meteo.report/open_data/forecasts/trentino.json",
+    "downloaded_at": "2026-11-25T10:19:10+00:00",
+    "bytes": 118910,
+    "note": ""
+  },
+  "forecast/forecasts/00140f3e-551b-4162-9a61-fa5b72f9698e.json": {
+    "url": "https://meteo.report/var/data/forecasts/00140f3e-551b-4162-9a61-fa5b72f9698e.json",
+    "downloaded_at": "2026-11-25T10:19:10+00:00",
+    "bytes": 13261,
+    "note": ""
+  },
+  "forecast/forecasts/022409ae-b6f4-430a-90c4-e1a07423f88b.json": {
+    "url": "https://meteo.report/var/data/forecasts/022409ae-b6f4-430a-90c4-e1a07423f88b.json",
+    "downloaded_at": "2026-11-25T10:19:10+00:00",
+    "bytes": 13264,
+    "note": ""
+  },
+  "forecast/forecasts/02670c4a-febf-4001-9b77-6d45619f27b1.json": {
+    "url": "https://meteo.report/var/data/forecasts/02670c4a-febf-4001-9b77-6d45619f27b1.json",
+    "downloaded_at": "2026-11-25T10:19:11+00:00",
+    "bytes": 13280,
+    "note": ""
+  },
+  "forecast/forecasts/02cd7dd1-aa55-40f6-a000-b9050e4695af.json": {
+    "url": "https://meteo.report/var/data/forecasts/02cd7dd1-aa55-40f6-a000-b9050e4695af.json",
+    "downloaded_at": "2026-11-25T10:19:11+00:00",
+    "bytes": 13284,
+    "note": ""
+  },
+  "forecast/forecasts/034a30f4-aa50-411f-948f-d4365f1be53f.json": {
+    "url": "https://meteo.report/var/data/forecasts/034a30f4-aa50-411f-948f-d4365f1be53f.json",
+    "downloaded_at": "2026-11-25T10:19:11+00:00",
+    "bytes": 13225,
+    "note": ""
+  },
+  "forecast/forecasts/03525eb1-c139-4bbd-b836-cc7d3eaa78b3.json": {
+    "url": "https://meteo.report/var/data/forecasts/03525eb1-c139-4bbd-b836-cc7d3eaa78b3.json",
+    "downloaded_at": "2026-11-25T10:19:12+00:00",
+    "bytes": 13266,
+    "note": ""
+  },
+  "forecast/forecasts/08473db5-3cb6-44ac-bd07-c23f72d8d552.json": {
+    "url": "https://meteo.report/var/data/forecasts/08473db5-3cb6-44ac-bd07-c23f72d8d552.json",
+    "downloaded_at": "2026-11-25T10:19:12+00:00",
+    "bytes": 13263,
+    "note": ""
+  },
+  "forecast/forecasts/0867c080-d2f7-4607-bd32-fb50b47fc91e.json": {
+    "url": "https://meteo.report/var/data/forecasts/0867c080-d2f7-4607-bd32-fb50b47fc91e.json",
+    "downloaded_at": "2026-11-25T10:19:12+00:00",
+    "bytes": 13271,
+    "note": ""
+  },
+  "forecast/forecasts/0aa5df86-53a9-4589-bd82-ec7ab4f4fff9.json": {
+    "url": "https://meteo.report/var/data/forecasts/0aa5df86-53a9-4589-bd82-ec7ab4f4fff9.json",
+    "downloaded_at": "2026-11-25T10:19:12+00:00",
+    "bytes": 13228,
+    "note": ""
+  },
+  "forecast/forecasts/0f1b5876-9325-4685-a471-1938cf39ec80.json": {
+    "url": "https://meteo.report/var/data/forecasts/0f1b5876-9325-4685-a471-1938cf39ec80.json",
+    "downloaded_at": "2026-11-25T10:19:13+00:00",
+    "bytes": 13244,
+    "note": ""
+  },
+  "forecast/forecasts/106202e5-b797-47bf-8434-eb3f88a80791.json": {
+    "url": "https://meteo.report/var/data/forecasts/106202e5-b797-47bf-8434-eb3f88a80791.json",
+    "downloaded_at": "2026-11-25T10:19:13+00:00",
+    "bytes": 13242,
+    "note": ""
+  },
+  "forecast/forecasts/111a8fd9-33a2-40c4-836b-183bdc3ae6ad.json": {
+    "url": "https://meteo.report/var/data/forecasts/111a8fd9-33a2-40c4-836b-183bdc3ae6ad.json",
+    "downloaded_at": "2026-11-25T10:19:13+00:00",
+    "bytes": 13268,
+    "note": ""
+  },
+  "forecast/forecasts/128ce718-6b93-4f48-b3fd-4ead37aec63d.json": {
+    "url": "https://meteo.report/var/data/forecasts/128ce718-6b93-4f48-b3fd-4ead37aec63d.json",
+    "downloaded_at": "2026-11-25T10:19:14+00:00",
+    "bytes": 13267,
+    "note": ""
+  },
+  "forecast/forecasts/135c1bb1-8b05-4ed8-830e-ff7443a8f9bd.json": {
+    "url": "https://meteo.report/var/data/forecasts/135c1bb1-8b05-4ed8-830e-ff7443a8f9bd.json",
+    "downloaded_at": "2026-11-25T10:19:14+00:00",
+    "bytes": 13231,
+    "note": ""
+  },
+  "forecast/forecasts/150b31ac-970a-460a-91f5-603f8222cfde.json": {
+    "url": "https://meteo.report/var/data/forecasts/150b31ac-970a-460a-91f5-603f8222cfde.json",
+    "downloaded_at": "2026-11-25T10:19:14+00:00",
+    "bytes": 13227,
+    "note": ""
+  },
+  "forecast/forecasts/17721771-61d5-417f-9702-4a759a33e4e3.json": {
+    "url": "https://meteo.report/var/data/forecasts/17721771-61d5-417f-9702-4a759a33e4e3.json",
+    "downloaded_at": "2026-11-25T10:19:15+00:00",
+    "bytes": 13265,
+    "note": ""
+  },
+  "forecast/forecasts/186ca596-abfc-4882-ac14-999ed5edc6c6.json": {
+    "url": "https://meteo.report/var/data/forecasts/186ca596-abfc-4882-ac14-999ed5edc6c6.json",
+    "downloaded_at": "2026-11-25T10:19:15+00:00",
+    "bytes": 13233,
+    "note": ""
+  },
+  "forecast/forecasts/19e81b01-fafd-4abb-921b-9ab34140da0a.json": {
+    "url": "https://meteo.report/var/data/forecasts/19e81b01-fafd-4abb-921b-9ab34140da0a.json",
+    "downloaded_at": "2026-11-25T10:19:15+00:00",
+    "bytes": 13267,
+    "note": ""
+  },
+  "forecast/forecasts/1aa05d9a-9f2b-4c6a-8c2d-52da0ae60b88.json": {
+    "url": "https://meteo.report/var/data/forecasts/1aa05d9a-9f2b-4c6a-8c2d-52da0ae60b88.json",
+    "downloaded_at": "2026-11-25T10:19:15+00:00",
+    "bytes": 13238,
+    "note": ""
+  },
+  "forecast/forecasts/1adf3aad-7f17-4cda-9c04-1b3988632799.json": {
+    "url": "https://meteo.report/var/data/forecasts/1adf3aad-7f17-4cda-9c04-1b3988632799.json",
+    "downloaded_at": "2026-11-25T10:19:16+00:00",
+    "bytes": 13270,
+    "note": ""
+  },
+  "forecast/forecasts/1c6f9b44-094a-4604-8023-33be3d5e7be5.json": {
+    "url": "https://meteo.report/var/data/forecasts/1c6f9b44-094a-4604-8023-33be3d5e7be5.json",
+    "downloaded_at": "2026-11-25T10:19:16+00:00",
+    "bytes": 13265,
+    "note": ""
+  },
+  "forecast/forecasts/1e083c5e-19b2-477e-84a1-d71f2356f1ec.json": {
+    "url": "https://meteo.report/var/data/forecasts/1e083c5e-19b2-477e-84a1-d71f2356f1ec.json",
+    "downloaded_at": "2026-11-25T10:19:16+00:00",
+    "bytes": 13261,
+    "note": ""
+  },
+  "forecast/forecasts/1e5616b1-f529-4b9a-b66d-ed896c8b93e5.json": {
+    "url": "https://meteo.report/var/data/forecasts/1e5616b1-f529-4b9a-b66d-ed896c8b93e5.json",
+    "downloaded_at": "2026-11-25T10:19:17+00:00",
+    "bytes": 13269,
+    "note": ""
+  },
+  "forecast/forecasts/1f656b25-a7d3-40e1-bbd8-bfbb23e3abc0.json": {
+    "url": "https://meteo.report/var/data/forecasts/1f656b25-a7d3-40e1-bbd8-bfbb23e3abc0.json",
+    "downloaded_at": "2026-11-25T10:19:17+00:00",
+    "bytes": 13254,
+    "note": ""
+  },
+  "forecast/forecasts/1f9da140-ca05-4cd6-adbb-1dda1f24d872.json": {
+    "url": "https://meteo.report/var/data/forecasts/1f9da140-ca05-4cd6-adbb-1dda1f24d872.json",
+    "downloaded_at": "2026-11-25T10:19:17+00:00",
+    "bytes": 13220,
+    "note": ""
+  },
+  "forecast/forecasts/21beb719-69d1-4db3-a99d-1a0a9b990182.json": {
+    "url": "https://meteo.report/var/data/forecasts/21beb719-69d1-4db3-a99d-1a0a9b990182.json",
+    "downloaded_at": "2026-11-25T10:19:18+00:00",
+    "bytes": 13244,
+    "note": ""
+  },
+  "forecast/forecasts/22a90429-6482-47a7-a1b2-2ed6582bd0f5.json": {
+    "url": "https://meteo.report/var/data/forecasts/22a90429-6482-47a7-a1b2-2ed6582bd0f5.json",
+    "downloaded_at": "2026-11-25T10:19:18+00:00",
+    "bytes": 13261,
+    "note": ""
+  },
+  "forecast/forecasts/23bf9fa6-3255-4a5a-a714-2ca30ca6a809.json": {
+    "url": "https://meteo.report/var/data/forecasts/23bf9fa6-3255-4a5a-a714-2ca30ca6a809.json",
+    "downloaded_at": "2026-11-25T10:19:18+00:00",
+    "bytes": 13231,
+    "note": ""
+  },
+  "forecast/forecasts/23dc4f14-76a6-4753-abfd-2daba5ac482d.json": {
+    "url": "https://meteo.report/var/data/forecasts/23dc4f14-76a6-4753-abfd-2daba5ac482d.json",
+    "downloaded_at": "2026-11-25T10:19:18+00:00",
+    "bytes": 13262,
+    "note": ""
+  },
+  "forecast/forecasts/23e2c736-f478-47ea-81fb-948f867cae89.json": {
+    "url": "https://meteo.report/var/data/forecasts/23e2c736-f478-47ea-81fb-948f867cae89.json",
+    "downloaded_at": "2026-11-25T10:19:19+00:00",
+    "bytes": 13253,
+    "note": ""
+  },
+  "forecast/forecasts/26fe0297-af43-41b0-b579-c81ea2cd6786.json": {
+    "url": "https://meteo.report/var/data/forecasts/26fe0297-af43-41b0-b579-c81ea2cd6786.json",
+    "downloaded_at": "2026-11-25T10:19:19+00:00",
+    "bytes": 13258,
+    "note": ""
+  },
+  "forecast/forecasts/27b0481d-1e45-4fb8-8fe8-72c26e339e8a.json": {
+    "url": "https://meteo.report/var/data/forecasts/27b0481d-1e45-4fb8-8fe8-72c26e339e8a.json",
+    "downloaded_at": "2026-11-25T10:19:19+00:00",
+    "bytes": 13262,
+    "note": ""
+  },
+  "forecast/forecasts/29e8072a-110b-48c3-908c-268c3e334808.json": {
+    "url": "https://meteo.report/var/data/forecasts/29e8072a-110b-48c3-908c-268c3e334808.json",
+    "downloaded_at": "2026-11-25T10:19:20+00:00",
+    "bytes": 13225,
+    "note": ""
+  },
+  "forecast/forecasts/2d3dd4a1-d81c-44fa-8734-60c61ed23aff.json": {
+    "url": "https://meteo.report/var/data/forecasts/2d3dd4a1-d81c-44fa-8734-60c61ed23aff.json",
+    "downloaded_at": "2026-11-25T10:19:20+00:00",
+    "bytes": 13240,
+    "note": ""
+  },
+  "forecast/forecasts/2deefb09-08f8-441a-a716-aa353524db8c.json": {
+    "url": "https://meteo.report/var/data/forecasts/2deefb09-08f8-441a-a716-aa353524db8c.json",
+    "downloaded_at": "2026-11-25T10:19:20+00:00",
+    "bytes": 13269,
+    "note": ""
+  },
+  "forecast/forecasts/2f7120c7-26a5-4585-bbef-bc05633636a8.json": {
+    "url": "https://meteo.report/var/data/forecasts/2f7120c7-26a5-4585-bbef-bc05633636a8.json",
+    "downloaded_at": "2026-11-25T10:19:21+00:00",
+    "bytes": 13249,
+    "note": ""
+  },
+  "forecast/forecasts/3080a9af-d7bb-49cc-8747-d6bb51408267.json": {
+    "url": "https://meteo.report/var/data/forecasts/3080a9af-d7bb-49cc-8747-d6bb51408267.json",
+    "downloaded_at": "2026-11-25T10:19:21+00:00",
+    "bytes": 13257,
+    "note": ""
+  },
+  "forecast/forecasts/30f0ca2a-a8d2-4d39-bb1d-514f35f44142.json": {
+    "url": "https://meteo.report/var/data/forecasts/30f0ca2a-a8d2-4d39-bb1d-514f35f44142.json",
+    "downloaded_at": "2026-11-25T10:19:21+00:00",
+    "bytes": 13250,
+    "note": ""
+  },
+  "forecast/forecasts/328bb878-76fd-4d9c-a198-1af6a2095f2f.json": {
+    "url": "https://meteo.report/var/data/forecasts/328bb878-76fd-4d9c-a198-1af6a2095f2f.json",
+    "downloaded_at": "2026-11-25T10:19:22+00:00",
+    "bytes": 13247,
+    "note": ""
+  },
+  "forecast/forecasts/3399bfc3-c9b6-41b3-a5db-de75c590a9a1.json": {
+    "url": "https://meteo.report/var/data/forecasts/3399bfc3-c9b6-41b3-a5db-de75c590a9a1.json",
+    "downloaded_at": "2026-11-25T10:19:22+00:00",
+    "bytes": 13252,
+    "note": ""
+  },
+  "forecast/forecasts/34e6798e-05cb-405f-a5e5-565c0f16edad.json": {
+    "url": "https://meteo.report/var/data/forecasts/34e6798e-05cb-405f-a5e5-565c0f16edad.json",
+    "downloaded_at": "2026-11-25T10:19:22+00:00",
+    "bytes": 13263,
+    "note": ""
+  },
+  "forecast/forecasts/358309dc-78e9-4f6c-8681-c96079d9ea49.json": {
+    "url": "https://meteo.report/var/data/forecasts/358309dc-78e9-4f6c-8681-c96079d9ea49.json",
+    "downloaded_at": "2026-11-25T10:19:22+00:00",
+    "bytes": 13227,
+    "note": ""
+  },
+  "forecast/forecasts/35c6a001-c881-4e1e-a405-361a5443b18d.json": {
+    "url": "https://meteo.report/var/data/forecasts/35c6a001-c881-4e1e-a405-361a5443b18d.json",
+    "downloaded_at": "2026-11-25T10:19:23+00:00",
+    "bytes": 13223,
+    "note": ""
+  },
+  "forecast/forecasts/37bb2112-8b78-4e67-a14b-a8c1841c0804.json": {
+    "url": "https://meteo.report/var/data/forecasts/37bb2112-8b78-4e67-a14b-a8c1841c0804.json",
+    "downloaded_at": "2026-11-25T10:19:23+00:00",
+    "bytes": 13230,
+    "note": ""
+  },
+  "forecast/forecasts/3815fbae-78be-47b9-a675-f99231f0d978.json": {
+    "url": "https://meteo.report/var/data/forecasts/3815fbae-78be-47b9-a675-f99231f0d978.json",
+    "downloaded_at": "2026-11-25T10:19:23+00:00",
+    "bytes": 13269,
+    "note": ""
+  },
+  "forecast/forecasts/3a541c02-d2f4-4eb6-b300-88ae21a009be.json": {
+    "url": "https://meteo.report/var/data/forecasts/3a541c02-d2f4-4eb6-b300-88ae21a009be.json",
+    "downloaded_at": "2026-11-25T10:19:24+00:00",
+    "bytes": 13268,
+    "note": ""
+  },
+  "forecast/forecasts/3a623b82-1fd5-40a3-99db-bf125446e3d8.json": {
+    "url": "https://meteo.report/var/data/forecasts/3a623b82-1fd5-40a3-99db-bf125446e3d8.json",
+    "downloaded_at": "2026-11-25T10:19:24+00:00",
+    "bytes": 13247,
+    "note": ""
+  },
+  "forecast/forecasts/3afe4975-74f3-461f-b595-8d480a69c484.json": {
+    "url": "https://meteo.report/var/data/forecasts/3afe4975-74f3-461f-b595-8d480a69c484.json",
+    "downloaded_at": "2026-11-25T10:19:24+00:00",
+    "bytes": 13252,
+    "note": ""
+  },
+  "forecast/forecasts/3c4bc6bf-212c-4a2a-8556-9689ce2ca9ab.json": {
+    "url": "https://meteo.report/var/data/forecasts/3c4bc6bf-212c-4a2a-8556-9689ce2ca9ab.json",
+    "downloaded_at": "2026-11-25T10:19:25+00:00",
+    "bytes": 13270,
+    "note": ""
+  },
+  "forecast/forecasts/3f047e32-b139-4096-ae25-9c83a4441130.json": {
+    "url": "https://meteo.report/var/data/forecasts/3f047e32-b139-4096-ae25-9c83a4441130.json",
+    "downloaded_at": "2026-11-25T10:19:25+00:00",
+    "bytes": 13259,
+    "note": ""
+  },
+  "forecast/forecasts/419a12dc-c379-4c33-bd72-b870351a1b51.json": {
+    "url": "https://meteo.report/var/data/forecasts/419a12dc-c379-4c33-bd72-b870351a1b51.json",
+    "downloaded_at": "2026-11-25T10:19:25+00:00",
+    "bytes": 13275,
+    "note": ""
+  },
+  "forecast/forecasts/43f0e812-8c25-4cf4-b279-cc91edbb5b81.json": {
+    "url": "https://meteo.report/var/data/forecasts/43f0e812-8c25-4cf4-b279-cc91edbb5b81.json",
+    "downloaded_at": "2026-11-25T10:19:25+00:00",
+    "bytes": 13247,
+    "note": ""
+  },
+  "forecast/forecasts/4526a780-d3a8-4866-b6c1-23f260c1356a.json": {
+    "url": "https://meteo.report/var/data/forecasts/4526a780-d3a8-4866-b6c1-23f260c1356a.json",
+    "downloaded_at": "2026-11-25T10:19:26+00:00",
+    "bytes": 13270,
+    "note": ""
+  },
+  "forecast/forecasts/48bb1e05-f5c8-4e49-9cb5-72dfb4933499.json": {
+    "url": "https://meteo.report/var/data/forecasts/48bb1e05-f5c8-4e49-9cb5-72dfb4933499.json",
+    "downloaded_at": "2026-11-25T10:19:26+00:00",
+    "bytes": 13274,
+    "note": ""
+  },
+  "forecast/forecasts/493f942b-0f26-4266-888d-77382b00569e.json": {
+    "url": "https://meteo.report/var/data/forecasts/493f942b-0f26-4266-888d-77382b00569e.json",
+    "downloaded_at": "2026-11-25T10:19:26+00:00",
+    "bytes": 13256,
+    "note": ""
+  },
+  "forecast/forecasts/4b64ef5b-b493-4304-b83a-0cddf984da48.json": {
+    "url": "https://meteo.report/var/data/forecasts/4b64ef5b-b493-4304-b83a-0cddf984da48.json",
+    "downloaded_at": "2026-11-25T10:19:27+00:00",
+    "bytes": 13222,
+    "note": ""
+  },
+  "forecast/forecasts/4bd9dbf4-c327-4201-941b-bf334ffd6de2.json": {
+    "url": "https://meteo.report/var/data/forecasts/4bd9dbf4-c327-4201-941b-bf334ffd6de2.json",
+    "downloaded_at": "2026-11-25T10:19:27+00:00",
+    "bytes": 13262,
+    "note": ""
+  },
+  "forecast/forecasts/4c17a2c4-f05d-4927-9a4f-daec87823174.json": {
+    "url": "https://meteo.report/var/data/forecasts/4c17a2c4-f05d-4927-9a4f-daec87823174.json",
+    "downloaded_at": "2026-11-25T10:19:27+00:00",
+    "bytes": 13264,
+    "note": ""
+  },
+  "forecast/forecasts/4c41f402-85f0-4807-a904-03c31315bd1e.json": {
+    "url": "https://meteo.report/var/data/forecasts/4c41f402-85f0-4807-a904-03c31315bd1e.json",
+    "downloaded_at": "2026-11-25T10:19:28+00:00",
+    "bytes": 13250,
+    "note": ""
+  },
+  "forecast/forecasts/4c6eaca3-6537-4f5b-80bf-ff5f792b84c7.json": {
+    "url": "https://meteo.report/var/data/forecasts/4c6eaca3-6537-4f5b-80bf-ff5f792b84c7.json",
+    "downloaded_at": "2026-11-25T10:19:28+00:00",
+    "bytes": 13240,
+    "note": ""
+  },
+  "forecast/forecasts/4eb7b383-f759-40bf-8cb2-5276dd769677.json": {
+    "url": "https://meteo.report/var/data/forecasts/4eb7b383-f759-40bf-8cb2-5276dd769677.json",
+    "downloaded_at": "2026-11-25T10:19:28+00:00",
+    "bytes": 13262,
+    "note": ""
+  },
+  "forecast/forecasts/4f78668c-ee3b-49b0-a481-6a72fe67dda6.json": {
+    "url": "https://meteo.report/var/data/forecasts/4f78668c-ee3b-49b0-a481-6a72fe67dda6.json",
+    "downloaded_at": "2026-11-25T10:19:29+00:00",
+    "bytes": 13227,
+    "note": ""
+  },
+  "forecast/forecasts/501d3c7f-ba05-48d9-b112-1a6dc2bf77b0.json": {
+    "url": "https://meteo.report/var/data/forecasts/501d3c7f-ba05-48d9-b112-1a6dc2bf77b0.json",
+    "downloaded_at": "2026-11-25T10:19:29+00:00",
+    "bytes": 13265,
+    "note": ""
+  },
+  "forecast/forecasts/50a55eb0-18d6-4102-bcdb-794b831000b3.json": {
+    "url": "https://meteo.report/var/data/forecasts/50a55eb0-18d6-4102-bcdb-794b831000b3.json",
+    "downloaded_at": "2026-11-25T10:19:29+00:00",
+    "bytes": 13214,
+    "note": ""
+  },
+  "forecast/forecasts/51196180-ddd3-496f-8f53-c75d505422df.json": {
+    "url": "https://meteo.report/var/data/forecasts/51196180-ddd3-496f-8f53-c75d505422df.json",
+    "downloaded_at": "2026-11-25T10:19:29+00:00",
+    "bytes": 13229,
+    "note": ""
+  },
+  "forecast/forecasts/51727344-6fbe-4fb5-b9a4-b8cfce13017b.json": {
+    "url": "https://meteo.report/var/data/forecasts/51727344-6fbe-4fb5-b9a4-b8cfce13017b.json",
+    "downloaded_at": "2026-11-25T10:19:30+00:00",
+    "bytes": 13221,
+    "note": ""
+  },
+  "forecast/forecasts/51d00f86-8ff3-46c6-b66c-1e7a0c300950.json": {
+    "url": "https://meteo.report/var/data/forecasts/51d00f86-8ff3-46c6-b66c-1e7a0c300950.json",
+    "downloaded_at": "2026-11-25T10:19:30+00:00",
+    "bytes": 13270,
+    "note": ""
+  },
+  "forecast/forecasts/523f9dd3-363f-4a3f-a720-5e833a391975.json": {
+    "url": "https://meteo.report/var/data/forecasts/523f9dd3-363f-4a3f-a720-5e833a391975.json",
+    "downloaded_at": "2026-11-25T10:19:30+00:00",
+    "bytes": 13227,
+    "note": ""
+  },
+  "forecast/forecasts/52f0a2bc-6c24-4eb6-b977-18f8f8c5a954.json": {
+    "url": "https://meteo.report/var/data/forecasts/52f0a2bc-6c24-4eb6-b977-18f8f8c5a954.json",
+    "downloaded_at": "2026-11-25T10:19:31+00:00",
+    "bytes": 13277,
+    "note": ""
+  },
+  "forecast/forecasts/532de7ad-8fee-4162-a298-afc80c3af87f.json": {
+    "url": "https://meteo.report/var/data/forecasts/532de7ad-8fee-4162-a298-afc80c3af87f.json",
+    "downloaded_at": "2026-11-25T10:19:31+00:00",
+    "bytes": 13271,
+    "note": ""
+  },
+  "forecast/forecasts/559189d7-8b31-4cae-93f8-fd50c16a08ad.json": {
+    "url": "https://meteo.report/var/data/forecasts/559189d7-8b31-4cae-93f8-fd50c16a08ad.json",
+    "downloaded_at": "2026-11-25T10:19:31+00:00",
+    "bytes": 13245,
+    "note": ""
+  },
+  "forecast/forecasts/56494f31-d210-452e-8c6d-e665b0f69c93.json": {
+    "url": "https://meteo.report/var/data/forecasts/56494f31-d210-452e-8c6d-e665b0f69c93.json",
+    "downloaded_at": "2026-11-25T10:19:32+00:00",
+    "bytes": 13257,
+    "note": ""
+  },
+  "forecast/forecasts/57ec3caf-99b2-46e2-831f-15392dcf7934.json": {
+    "url": "https://meteo.report/var/data/forecasts/57ec3caf-99b2-46e2-831f-15392dcf7934.json",
+    "downloaded_at": "2026-11-25T10:19:32+00:00",
+    "bytes": 13219,
+    "note": ""
+  },
+  "forecast/forecasts/58a1134f-2ac1-4095-a52f-e381e1d4a39a.json": {
+    "url": "https://meteo.report/var/data/forecasts/58a1134f-2ac1-4095-a52f-e381e1d4a39a.json",
+    "downloaded_at": "2026-11-25T10:19:32+00:00",
+    "bytes": 13234,
+    "note": ""
+  },
+  "forecast/forecasts/58d8fb51-0e77-4989-aff3-87960c52e3e3.json": {
+    "url": "https://meteo.report/var/data/forecasts/58d8fb51-0e77-4989-aff3-87960c52e3e3.json",
+    "downloaded_at": "2026-11-25T10:19:32+00:00",
+    "bytes": 13230,
+    "note": ""
+  },
+  "forecast/forecasts/5a5d33b6-7144-4913-b1be-45dbd7a9d7fd.json": {
+    "url": "https://meteo.report/var/data/forecasts/5a5d33b6-7144-4913-b1be-45dbd7a9d7fd.json",
+    "downloaded_at": "2026-11-25T10:19:33+00:00",
+    "bytes": 13276,
+    "note": ""
+  },
+  "forecast/forecasts/5acc95bb-cfb3-4d53-8547-f1d9a3418d11.json": {
+    "url": "https://meteo.report/var/data/forecasts/5acc95bb-cfb3-4d53-8547-f1d9a3418d11.json",
+    "downloaded_at": "2026-11-25T10:19:33+00:00",
+    "bytes": 13285,
+    "note": ""
+  },
+  "forecast/forecasts/5d71d863-9b91-49db-a24a-84430b367c30.json": {
+    "url": "https://meteo.report/var/data/forecasts/5d71d863-9b91-49db-a24a-84430b367c30.json",
+    "downloaded_at": "2026-11-25T10:19:34+00:00",
+    "bytes": 13258,
+    "note": ""
+  },
+  "forecast/forecasts/5dd99448-23a8-4857-9238-1f59fa6caeb6.json": {
+    "url": "https://meteo.report/var/data/forecasts/5dd99448-23a8-4857-9238-1f59fa6caeb6.json",
+    "downloaded_at": "2026-11-25T10:19:34+00:00",
+    "bytes": 13232,
+    "note": ""
+  },
+  "forecast/forecasts/5f900be9-dbbe-4068-9397-13073dde2cf4.json": {
+    "url": "https://meteo.report/var/data/forecasts/5f900be9-dbbe-4068-9397-13073dde2cf4.json",
+    "downloaded_at": "2026-11-25T10:19:34+00:00",
+    "bytes": 13266,
+    "note": ""
+  },
+  "forecast/forecasts/6064a14c-3483-44c4-a64c-45b471b4783c.json": {
+    "url": "https://meteo.report/var/data/forecasts/6064a14c-3483-44c4-a64c-45b471b4783c.json",
+    "downloaded_at": "2026-11-25T10:19:34+00:00",
+    "bytes": 13252,
+    "note": ""
+  },
+  "forecast/forecasts/64744061-31fc-4621-beed-1d6bf7ee63f5.json": {
+    "url": "https://meteo.report/var/data/forecasts/64744061-31fc-4621-beed-1d6bf7ee63f5.json",
+    "downloaded_at": "2026-11-25T10:19:35+00:00",
+    "bytes": 13226,
+    "note": ""
+  },
+  "forecast/forecasts/658669ac-8ab9-4615-9ff4-8388d7deaf7b.json": {
+    "url": "https://meteo.report/var/data/forecasts/658669ac-8ab9-4615-9ff4-8388d7deaf7b.json",
+    "downloaded_at": "2026-11-25T10:19:35+00:00",
+    "bytes": 13236,
+    "note": ""
+  },
+  "forecast/forecasts/6851b216-83f7-4228-b913-6bb2e56d37a7.json": {
+    "url": "https://meteo.report/var/data/forecasts/6851b216-83f7-4228-b913-6bb2e56d37a7.json",
+    "downloaded_at": "2026-11-25T10:19:35+00:00",
+    "bytes": 13270,
+    "note": ""
+  },
+  "forecast/forecasts/68c600e0-078f-41c7-b583-a1faeac71147.json": {
+    "url": "https://meteo.report/var/data/forecasts/68c600e0-078f-41c7-b583-a1faeac71147.json",
+    "downloaded_at": "2026-11-25T10:19:36+00:00",
+    "bytes": 13219,
+    "note": ""
+  },
+  "forecast/forecasts/68cf5878-23f5-4cc1-afa4-2ec595abc9b3.json": {
+    "url": "https://meteo.report/var/data/forecasts/68cf5878-23f5-4cc1-afa4-2ec595abc9b3.json",
+    "downloaded_at": "2026-11-25T10:19:36+00:00",
+    "bytes": 13229,
+    "note": ""
+  },
+  "forecast/forecasts/693fcdd9-aa41-4e24-a88a-bc76925c3e29.json": {
+    "url": "https://meteo.report/var/data/forecasts/693fcdd9-aa41-4e24-a88a-bc76925c3e29.json",
+    "downloaded_at": "2026-11-25T10:19:36+00:00",
+    "bytes": 13283,
+    "note": ""
+  },
+  "forecast/forecasts/69793d0f-ca9a-4779-9cf8-9db1e2fe3459.json": {
+    "url": "https://meteo.report/var/data/forecasts/69793d0f-ca9a-4779-9cf8-9db1e2fe3459.json",
+    "downloaded_at": "2026-11-25T10:19:37+00:00",
+    "bytes": 13245,
+    "note": ""
+  },
+  "forecast/forecasts/6b0810db-3cd3-41b7-9bb7-2be3e8cc9765.json": {
+    "url": "https://meteo.report/var/data/forecasts/6b0810db-3cd3-41b7-9bb7-2be3e8cc9765.json",
+    "downloaded_at": "2026-11-25T10:19:37+00:00",
+    "bytes": 13233,
+    "note": ""
+  },
+  "forecast/forecasts/6d49623e-0264-4292-a820-86a5269c7d8d.json": {
+    "url": "https://meteo.report/var/data/forecasts/6d49623e-0264-4292-a820-86a5269c7d8d.json",
+    "downloaded_at": "2026-11-25T10:19:37+00:00",
+    "bytes": 13216,
+    "note": ""
+  },
+  "forecast/forecasts/6dc1016a-0be5-414b-91e4-9c926a895e1e.json": {
+    "url": "https://meteo.report/var/data/forecasts/6dc1016a-0be5-414b-91e4-9c926a895e1e.json",
+    "downloaded_at": "2026-11-25T10:19:38+00:00",
+    "bytes": 13262,
+    "note": ""
+  },
+  "forecast/forecasts/6e2c01ba-5fde-424d-a17f-c6937805c115.json": {
+    "url": "https://meteo.report/var/data/forecasts/6e2c01ba-5fde-424d-a17f-c6937805c115.json",
+    "downloaded_at": "2026-11-25T10:19:38+00:00",
+    "bytes": 13279,
+    "note": ""
+  },
+  "forecast/forecasts/6e5183cd-f272-4cfc-b953-c4d977b5a610.json": {
+    "url": "https://meteo.report/var/data/forecasts/6e5183cd-f272-4cfc-b953-c4d977b5a610.json",
+    "downloaded_at": "2026-11-25T10:19:38+00:00",
+    "bytes": 13264,
+    "note": ""
+  },
+  "forecast/forecasts/6ec60a8a-96e5-4312-a077-ca805a03ceb1.json": {
+    "url": "https://meteo.report/var/data/forecasts/6ec60a8a-96e5-4312-a077-ca805a03ceb1.json",
+    "downloaded_at": "2026-11-25T10:19:39+00:00",
+    "bytes": 13282,
+    "note": ""
+  },
+  "forecast/forecasts/70e50c27-02d5-4d76-a5c4-e2c7d5e83674.json": {
+    "url": "https://meteo.report/var/data/forecasts/70e50c27-02d5-4d76-a5c4-e2c7d5e83674.json",
+    "downloaded_at": "2026-11-25T10:19:39+00:00",
+    "bytes": 13263,
+    "note": ""
+  },
+  "forecast/forecasts/714644d6-3fd0-4da3-b80f-860b29689770.json": {
+    "url": "https://meteo.report/var/data/forecasts/714644d6-3fd0-4da3-b80f-860b29689770.json",
+    "downloaded_at": "2026-11-25T10:19:39+00:00",
+    "bytes": 13266,
+    "note": ""
+  },
+  "forecast/forecasts/72ed25ed-9f81-447c-ac3b-c7afeca450cf.json": {
+    "url": "https://meteo.report/var/data/forecasts/72ed25ed-9f81-447c-ac3b-c7afeca450cf.json",
+    "downloaded_at": "2026-11-25T10:19:39+00:00",
+    "bytes": 13261,
+    "note": ""
+  },
+  "forecast/forecasts/73cbb4a5-bbcd-4e36-bb87-987adf8928be.json": {
+    "url": "https://meteo.report/var/data/forecasts/73cbb4a5-bbcd-4e36-bb87-987adf8928be.json",
+    "downloaded_at": "2026-11-25T10:19:40+00:00",
+    "bytes": 13273,
+    "note": ""
+  },
+  "forecast/forecasts/74014907-3b82-42ee-8de9-307a9a962213.json": {
+    "url": "https://meteo.report/var/data/forecasts/74014907-3b82-42ee-8de9-307a9a962213.json",
+    "downloaded_at": "2026-11-25T10:19:40+00:00",
+    "bytes": 13277,
+    "note": ""
+  },
+  "forecast/forecasts/74070c93-f8fb-4aab-9f64-85a5377bbec5.json": {
+    "url": "https://meteo.report/var/data/forecasts/74070c93-f8fb-4aab-9f64-85a5377bbec5.json",
+    "downloaded_at": "2026-11-25T10:19:40+00:00",
+    "bytes": 13234,
+    "note": ""
+  },
+  "forecast/forecasts/76142ee2-ff91-4a69-b2a7-5a66a73c4bbc.json": {
+    "url": "https://meteo.report/var/data/forecasts/76142ee2-ff91-4a69-b2a7-5a66a73c4bbc.json",
+    "downloaded_at": "2026-11-25T10:19:41+00:00",
+    "bytes": 13270,
+    "note": ""
+  },
+  "forecast/forecasts/77604dfd-9750-4334-8046-74f59c984a3f.json": {
+    "url": "https://meteo.report/var/data/forecasts/77604dfd-9750-4334-8046-74f59c984a3f.json",
+    "downloaded_at": "2026-11-25T10:19:41+00:00",
+    "bytes": 13251,
+    "note": ""
+  },
+  "forecast/forecasts/78910558-3ef0-451a-a046-a0a76a419452.json": {
+    "url": "https://meteo.report/var/data/forecasts/78910558-3ef0-451a-a046-a0a76a419452.json",
+    "downloaded_at": "2026-11-25T10:19:41+00:00",
+    "bytes": 13276,
+    "note": ""
+  },
+  "forecast/forecasts/79272660-5fe0-49ae-a712-f507241491b1.json": {
+    "url": "https://meteo.report/var/data/forecasts/79272660-5fe0-49ae-a712-f507241491b1.json",
+    "downloaded_at": "2026-11-25T10:19:42+00:00",
+    "bytes": 13285,
+    "note": ""
+  },
+  "forecast/forecasts/7d5c2086-fcef-41cc-959d-87c4d66c5b5c.json": {
+    "url": "https://meteo.report/var/data/forecasts/7d5c2086-fcef-41cc-959d-87c4d66c5b5c.json",
+    "downloaded_at": "2026-11-25T10:19:42+00:00",
+    "bytes": 13227,
+    "note": ""
+  },
+  "forecast/forecasts/7dc0dfec-7061-4962-9645-487778b5e93e.json": {
+    "url": "https://meteo.report/var/data/forecasts/7dc0dfec-7061-4962-9645-487778b5e93e.json",
+    "downloaded_at": "2026-11-25T10:19:42+00:00",
+    "bytes": 13261,
+    "note": ""
+  },
+  "forecast/forecasts/800d4724-452a-4641-8f4e-45b0777d4a87.json": {
+    "url": "https://meteo.report/var/data/forecasts/800d4724-452a-4641-8f4e-45b0777d4a87.json",
+    "downloaded_at": "2026-11-25T10:19:42+00:00",
+    "bytes": 13275,
+    "note": ""
+  },
+  "forecast/forecasts/80b006a2-5a18-4a96-9902-8a0535f8910d.json": {
+    "url": "https://meteo.report/var/data/forecasts/80b006a2-5a18-4a96-9902-8a0535f8910d.json",
+    "downloaded_at": "2026-11-25T10:19:43+00:00",
+    "bytes": 13251,
+    "note": ""
+  },
+  "forecast/forecasts/847d5c76-dfea-4cc5-9c8f-9fe37823f7ad.json": {
+    "url": "https://meteo.report/var/data/forecasts/847d5c76-dfea-4cc5-9c8f-9fe37823f7ad.json",
+    "downloaded_at": "2026-11-25T10:19:43+00:00",
+    "bytes": 13253,
+    "note": ""
+  },
+  "forecast/forecasts/87d9a0fb-b804-410b-81e6-c8bae1978abe.json": {
+    "url": "https://meteo.report/var/data/forecasts/87d9a0fb-b804-410b-81e6-c8bae1978abe.json",
+    "downloaded_at": "2026-11-25T10:19:44+00:00",
+    "bytes": 13270,
+    "note": ""
+  },
+  "forecast/forecasts/88c72523-d928-49c9-a188-dc9ca57e50d9.json": {
+    "url": "https://meteo.report/var/data/forecasts/88c72523-d928-49c9-a188-dc9ca57e50d9.json",
+    "downloaded_at": "2026-11-25T10:19:44+00:00",
+    "bytes": 13234,
+    "note": ""
+  },
+  "forecast/forecasts/88d227e2-11c0-43fd-be1c-d4d0eb82c8a8.json": {
+    "url": "https://meteo.report/var/data/forecasts/88d227e2-11c0-43fd-be1c-d4d0eb82c8a8.json",
+    "downloaded_at": "2026-11-25T10:19:44+00:00",
+    "bytes": 13263,
+    "note": ""
+  },
+  "forecast/forecasts/8b371ebb-2422-42b6-a2ae-abd3f5dd4256.json": {
+    "url": "https://meteo.report/var/data/forecasts/8b371ebb-2422-42b6-a2ae-abd3f5dd4256.json",
+    "downloaded_at": "2026-11-25T10:19:45+00:00",
+    "bytes": 13262,
+    "note": ""
+  },
+  "forecast/forecasts/8e1fdddf-42ad-4c5b-ba85-01d6d082a84a.json": {
+    "url": "https://meteo.report/var/data/forecasts/8e1fdddf-42ad-4c5b-ba85-01d6d082a84a.json",
+    "downloaded_at": "2026-11-25T10:19:45+00:00",
+    "bytes": 13229,
+    "note": ""
+  },
+  "forecast/forecasts/90168c47-1b9d-442f-8e83-10cfce7d8ac4.json": {
+    "url": "https://meteo.report/var/data/forecasts/90168c47-1b9d-442f-8e83-10cfce7d8ac4.json",
+    "downloaded_at": "2026-11-25T10:19:45+00:00",
+    "bytes": 13257,
+    "note": ""
+  },
+  "forecast/forecasts/912d6356-246f-4ef1-99aa-af9a7cfeed57.json": {
+    "url": "https://meteo.report/var/data/forecasts/912d6356-246f-4ef1-99aa-af9a7cfeed57.json",
+    "downloaded_at": "2026-11-25T10:19:46+00:00",
+    "bytes": 13231,
+    "note": ""
+  },
+  "forecast/forecasts/92fcc5d8-0709-4134-8402-e357dd464141.json": {
+    "url": "https://meteo.report/var/data/forecasts/92fcc5d8-0709-4134-8402-e357dd464141.json",
+    "downloaded_at": "2026-11-25T10:19:46+00:00",
+    "bytes": 13249,
+    "note": ""
+  },
+  "forecast/forecasts/94f28857-7e64-4587-acce-74121e255b83.json": {
+    "url": "https://meteo.report/var/data/forecasts/94f28857-7e64-4587-acce-74121e255b83.json",
+    "downloaded_at": "2026-11-25T10:19:46+00:00",
+    "bytes": 13232,
+    "note": ""
+  },
+  "forecast/forecasts/964becbc-cbeb-46a1-96ea-7bc11dafec89.json": {
+    "url": "https://meteo.report/var/data/forecasts/964becbc-cbeb-46a1-96ea-7bc11dafec89.json",
+    "downloaded_at": "2026-11-25T10:19:47+00:00",
+    "bytes": 13254,
+    "note": ""
+  },
+  "forecast/forecasts/9796fa3e-acff-4f12-8387-73a29173dc91.json": {
+    "url": "https://meteo.report/var/data/forecasts/9796fa3e-acff-4f12-8387-73a29173dc91.json",
+    "downloaded_at": "2026-11-25T10:19:47+00:00",
+    "bytes": 13251,
+    "note": ""
+  },
+  "forecast/forecasts/984c06ff-3d8f-4f35-9652-d6718f160a44.json": {
+    "url": "https://meteo.report/var/data/forecasts/984c06ff-3d8f-4f35-9652-d6718f160a44.json",
+    "downloaded_at": "2026-11-25T10:19:47+00:00",
+    "bytes": 13223,
+    "note": ""
+  },
+  "forecast/forecasts/99672c7a-64a0-4b4a-89d8-1fddc1fd658a.json": {
+    "url": "https://meteo.report/var/data/forecasts/99672c7a-64a0-4b4a-89d8-1fddc1fd658a.json",
+    "downloaded_at": "2026-11-25T10:19:48+00:00",
+    "bytes": 13252,
+    "note": ""
+  },
+  "forecast/forecasts/9e0c829c-1cbd-4050-b1bc-730c052200ca.json": {
+    "url": "https://meteo.report/var/data/forecasts/9e0c829c-1cbd-4050-b1bc-730c052200ca.json",
+    "downloaded_at": "2026-11-25T10:19:48+00:00",
+    "bytes": 13228,
+    "note": ""
+  },
+  "forecast/forecasts/9efc0db2-8457-4c25-91ce-6741e38d4d0a.json": {
+    "url": "https://meteo.report/var/data/forecasts/9efc0db2-8457-4c25-91ce-6741e38d4d0a.json",
+    "downloaded_at": "2026-11-25T10:19:48+00:00",
+    "bytes": 13273,
+    "note": ""
+  },
+  "forecast/forecasts/a1126516-2613-40d9-b335-5288d474e649.json": {
+    "url": "https://meteo.report/var/data/forecasts/a1126516-2613-40d9-b335-5288d474e649.json",
+    "downloaded_at": "2026-11-25T10:19:48+00:00",
+    "bytes": 13250,
+    "note": ""
+  },
+  "forecast/forecasts/a35c1ca5-1a8a-4db2-89be-8fa4b5c0bee0.json": {
+    "url": "https://meteo.report/var/data/forecasts/a35c1ca5-1a8a-4db2-89be-8fa4b5c0bee0.json",
+    "downloaded_at": "2026-11-25T10:19:49+00:00",
+    "bytes": 13234,
+    "note": ""
+  },
+  "forecast/forecasts/a7121494-e364-4cbb-bf46-6f49a465891f.json": {
+    "url": "https://meteo.report/var/data/forecasts/a7121494-e364-4cbb-bf46-6f49a465891f.json",
+    "downloaded_at": "2026-11-25T10:19:49+00:00",
+    "bytes": 13274,
+    "note": ""
+  },
+  "forecast/forecasts/a90f3571-dd95-48c3-962d-d59fa9dae704.json": {
+    "url": "https://meteo.report/var/data/forecasts/a90f3571-dd95-48c3-962d-d59fa9dae704.json",
+    "downloaded_at": "2026-11-25T10:19:49+00:00",
+    "bytes": 13248,
+    "note": ""
+  },
+  "forecast/forecasts/adf571fb-dbad-4185-8f4b-456612bb3bb0.json": {
+    "url": "https://meteo.report/var/data/forecasts/adf571fb-dbad-4185-8f4b-456612bb3bb0.json",
+    "downloaded_at": "2026-11-25T10:19:50+00:00",
+    "bytes": 13260,
+    "note": ""
+  },
+  "forecast/forecasts/af8e3f7f-2a4f-4ca7-8d2d-662462d9f983.json": {
+    "url": "https://meteo.report/var/data/forecasts/af8e3f7f-2a4f-4ca7-8d2d-662462d9f983.json",
+    "downloaded_at": "2026-11-25T10:19:50+00:00",
+    "bytes": 13265,
+    "note": ""
+  },
+  "forecast/forecasts/b0d0e3fc-01fe-4004-adf0-d560669bc7f4.json": {
+    "url": "https://meteo.report/var/data/forecasts/b0d0e3fc-01fe-4004-adf0-d560669bc7f4.json",
+    "downloaded_at": "2026-11-25T10:19:50+00:00",
+    "bytes": 13234,
+    "note": ""
+  },
+  "forecast/forecasts/b33a3c75-6a80-4d69-bfd6-6a83bd863928.json": {
+    "url": "https://meteo.report/var/data/forecasts/b33a3c75-6a80-4d69-bfd6-6a83bd863928.json",
+    "downloaded_at": "2026-11-25T10:19:51+00:00",
+    "bytes": 13258,
+    "note": ""
+  },
+  "forecast/forecasts/b368e865-4131-40e5-ae4b-4c4503584481.json": {
+    "url": "https://meteo.report/var/data/forecasts/b368e865-4131-40e5-ae4b-4c4503584481.json",
+    "downloaded_at": "2026-11-25T10:19:51+00:00",
+    "bytes": 13228,
+    "note": ""
+  },
+  "forecast/forecasts/b371e1b3-debc-4587-ab19-94b2f9656c09.json": {
+    "url": "https://meteo.report/var/data/forecasts/b371e1b3-debc-4587-ab19-94b2f9656c09.json",
+    "downloaded_at": "2026-11-25T10:19:51+00:00",
+    "bytes": 13268,
+    "note": ""
+  },
+  "forecast/forecasts/b3d3402d-30f3-4ca8-b1ef-166b5999e2a3.json": {
+    "url": "https://meteo.report/var/data/forecasts/b3d3402d-30f3-4ca8-b1ef-166b5999e2a3.json",
+    "downloaded_at": "2026-11-25T10:19:51+00:00",
+    "bytes": 13253,
+    "note": ""
+  },
+  "forecast/forecasts/b4fd9e10-8888-4832-816c-4b672d98a5fc.json": {
+    "url": "https://meteo.report/var/data/forecasts/b4fd9e10-8888-4832-816c-4b672d98a5fc.json",
+    "downloaded_at": "2026-11-25T10:19:52+00:00",
+    "bytes": 13258,
+    "note": ""
+  },
+  "forecast/forecasts/b7f387d0-a2bf-4d68-96f3-041c4a936f8f.json": {
+    "url": "https://meteo.report/var/data/forecasts/b7f387d0-a2bf-4d68-96f3-041c4a936f8f.json",
+    "downloaded_at": "2026-11-25T10:19:52+00:00",
+    "bytes": 13250,
+    "note": ""
+  },
+  "forecast/forecasts/bd81d7f2-efde-4f35-8fb0-41d1b6bb1230.json": {
+    "url": "https://meteo.report/var/data/forecasts/bd81d7f2-efde-4f35-8fb0-41d1b6bb1230.json",
+    "downloaded_at": "2026-11-25T10:19:52+00:00",
+    "bytes": 13261,
+    "note": ""
+  },
+  "forecast/forecasts/c0356f56-c39a-4425-a640-41fe6ff9aa5b.json": {
+    "url": "https://meteo.report/var/data/forecasts/c0356f56-c39a-4425-a640-41fe6ff9aa5b.json",
+    "downloaded_at": "2026-11-25T10:19:53+00:00",
+    "bytes": 13268,
+    "note": ""
+  },
+  "forecast/forecasts/c0808b1a-c732-41f4-94be-79823d15cbe6.json": {
+    "url": "https://meteo.report/var/data/forecasts/c0808b1a-c732-41f4-94be-79823d15cbe6.json",
+    "downloaded_at": "2026-11-25T10:19:53+00:00",
+    "bytes": 13266,
+    "note": ""
+  },
+  "forecast/forecasts/c08678b8-99d9-4015-aa50-debe19d971b7.json": {
+    "url": "https://meteo.report/var/data/forecasts/c08678b8-99d9-4015-aa50-debe19d971b7.json",
+    "downloaded_at": "2026-11-25T10:19:53+00:00",
+    "bytes": 13266,
+    "note": ""
+  },
+  "forecast/forecasts/c0963839-ab27-4f97-9915-9833f165347a.json": {
+    "url": "https://meteo.report/var/data/forecasts/c0963839-ab27-4f97-9915-9833f165347a.json",
+    "downloaded_at": "2026-11-25T10:19:54+00:00",
+    "bytes": 13226,
+    "note": ""
+  },
+  "forecast/forecasts/c0db0056-0089-43b3-9de4-474997257d53.json": {
+    "url": "https://meteo.report/var/data/forecasts/c0db0056-0089-43b3-9de4-474997257d53.json",
+    "downloaded_at": "2026-11-25T10:19:54+00:00",
+    "bytes": 13266,
+    "note": ""
+  },
+  "forecast/forecasts/c3278c9f-483f-481c-9593-32fc523e9d42.json": {
+    "url": "https://meteo.report/var/data/forecasts/c3278c9f-483f-481c-9593-32fc523e9d42.json",
+    "downloaded_at": "2026-11-25T10:19:54+00:00",
+    "bytes": 13265,
+    "note": ""
+  },
+  "forecast/forecasts/c4a33987-f71e-4497-bb5b-c985e148cafa.json": {
+    "url": "https://meteo.report/var/data/forecasts/c4a33987-f71e-4497-bb5b-c985e148cafa.json",
+    "downloaded_at": "2026-11-25T10:19:54+00:00",
+    "bytes": 13293,
+    "note": ""
+  },
+  "forecast/forecasts/c64f96f6-fb15-483a-aa3f-47a8905012ed.json": {
+    "url": "https://meteo.report/var/data/forecasts/c64f96f6-fb15-483a-aa3f-47a8905012ed.json",
+    "downloaded_at": "2026-11-25T10:19:55+00:00",
+    "bytes": 13276,
+    "note": ""
+  },
+  "forecast/forecasts/c8bba394-70cc-4aea-bf96-f4ef26cfc152.json": {
+    "url": "https://meteo.report/var/data/forecasts/c8bba394-70cc-4aea-bf96-f4ef26cfc152.json",
+    "downloaded_at": "2026-11-25T10:19:55+00:00",
+    "bytes": 13270,
+    "note": ""
+  },
+  "forecast/forecasts/cb45cce0-36f6-4693-be02-718fe43aef6f.json": {
+    "url": "https://meteo.report/var/data/forecasts/cb45cce0-36f6-4693-be02-718fe43aef6f.json",
+    "downloaded_at": "2026-11-25T10:19:55+00:00",
+    "bytes": 13259,
+    "note": ""
+  },
+  "forecast/forecasts/cbc65c6e-82aa-4e27-80ab-6a2d56479133.json": {
+    "url": "https://meteo.report/var/data/forecasts/cbc65c6e-82aa-4e27-80ab-6a2d56479133.json",
+    "downloaded_at": "2026-11-25T10:19:56+00:00",
+    "bytes": 13268,
+    "note": ""
+  },
+  "forecast/forecasts/cd5e82ae-ccd6-4ed2-a624-bdb2e2c00893.json": {
+    "url": "https://meteo.report/var/data/forecasts/cd5e82ae-ccd6-4ed2-a624-bdb2e2c00893.json",
+    "downloaded_at": "2026-11-25T10:19:56+00:00",
+    "bytes": 13237,
+    "note": ""
+  },
+  "forecast/forecasts/ceca8894-abbc-4ba3-b0ee-e8150b7e3a9f.json": {
+    "url": "https://meteo.report/var/data/forecasts/ceca8894-abbc-4ba3-b0ee-e8150b7e3a9f.json",
+    "downloaded_at": "2026-11-25T10:19:56+00:00",
+    "bytes": 13248,
+    "note": ""
+  },
+  "forecast/forecasts/cfce9526-f170-4e30-9e73-f2999c2ca933.json": {
+    "url": "https://meteo.report/var/data/forecasts/cfce9526-f170-4e30-9e73-f2999c2ca933.json",
+    "downloaded_at": "2026-11-25T10:19:57+00:00",
+    "bytes": 13225,
+    "note": ""
+  },
+  "forecast/forecasts/cfd9689c-f280-4175-8a5b-10a3d5122b4b.json": {
+    "url": "https://meteo.report/var/data/forecasts/cfd9689c-f280-4175-8a5b-10a3d5122b4b.json",
+    "downloaded_at": "2026-11-25T10:19:57+00:00",
+    "bytes": 13288,
+    "note": ""
+  },
+  "forecast/forecasts/d112b272-4379-46c1-ad6d-6585a167e208.json": {
+    "url": "https://meteo.report/var/data/forecasts/d112b272-4379-46c1-ad6d-6585a167e208.json",
+    "downloaded_at": "2026-11-25T10:19:57+00:00",
+    "bytes": 13265,
+    "note": ""
+  },
+  "forecast/forecasts/d161b7b6-5e92-4684-88b6-08079f94ca5d.json": {
+    "url": "https://meteo.report/var/data/forecasts/d161b7b6-5e92-4684-88b6-08079f94ca5d.json",
+    "downloaded_at": "2026-11-25T10:19:58+00:00",
+    "bytes": 13269,
+    "note": ""
+  },
+  "forecast/forecasts/d1d9e526-6f50-40ef-93de-7b2f78316d7f.json": {
+    "url": "https://meteo.report/var/data/forecasts/d1d9e526-6f50-40ef-93de-7b2f78316d7f.json",
+    "downloaded_at": "2026-11-25T10:19:58+00:00",
+    "bytes": 13266,
+    "note": ""
+  },
+  "forecast/forecasts/d2213d5a-b202-4f8c-b6a9-6a8877812e59.json": {
+    "url": "https://meteo.report/var/data/forecasts/d2213d5a-b202-4f8c-b6a9-6a8877812e59.json",
+    "downloaded_at": "2026-11-25T10:19:58+00:00",
+    "bytes": 13238,
+    "note": ""
+  },
+  "forecast/forecasts/d2888885-2878-48db-b903-6a1266db3582.json": {
+    "url": "https://meteo.report/var/data/forecasts/d2888885-2878-48db-b903-6a1266db3582.json",
+    "downloaded_at": "2026-11-25T10:19:58+00:00",
+    "bytes": 13240,
+    "note": ""
+  },
+  "forecast/forecasts/d2aa48d3-72db-4b1f-a694-6457b8d350e2.json": {
+    "url": "https://meteo.report/var/data/forecasts/d2aa48d3-72db-4b1f-a694-6457b8d350e2.json",
+    "downloaded_at": "2026-11-25T10:19:59+00:00",
+    "bytes": 13271,
+    "note": ""
+  },
+  "forecast/forecasts/d4919a62-1a1b-4d25-8164-4bd37b915dc0.json": {
+    "url": "https://meteo.report/var/data/forecasts/d4919a62-1a1b-4d25-8164-4bd37b915dc0.json",
+    "downloaded_at": "2026-11-25T10:19:59+00:00",
+    "bytes": 13266,
+    "note": ""
+  },
+  "forecast/forecasts/d4e059ba-a969-4275-9989-922c1a8894ad.json": {
+    "url": "https://meteo.report/var/data/forecasts/d4e059ba-a969-4275-9989-922c1a8894ad.json",
+    "downloaded_at": "2026-11-25T10:19:59+00:00",
+    "bytes": 13227,
+    "note": ""
+  },
+  "forecast/forecasts/d5c94af4-b6e7-42ff-9bd0-79e2269856cd.json": {
+    "url": "https://meteo.report/var/data/forecasts/d5c94af4-b6e7-42ff-9bd0-79e2269856cd.json",
+    "downloaded_at": "2026-11-25T10:20:00+00:00",
+    "bytes": 13311,
+    "note": ""
+  },
+  "forecast/forecasts/d60b9984-0f56-4456-97ce-f6a15c4f2cc7.json": {
+    "url": "https://meteo.report/var/data/forecasts/d60b9984-0f56-4456-97ce-f6a15c4f2cc7.json",
+    "downloaded_at": "2026-11-25T10:20:00+00:00",
+    "bytes": 13256,
+    "note": ""
+  },
+  "forecast/forecasts/d7b1e541-42dc-4d4d-8741-3d784e5cd37a.json": {
+    "url": "https://meteo.report/var/data/forecasts/d7b1e541-42dc-4d4d-8741-3d784e5cd37a.json",
+    "downloaded_at": "2026-11-25T10:20:00+00:00",
+    "bytes": 13245,
+    "note": ""
+  },
+  "forecast/forecasts/d84f35fa-b3dd-4172-b3ac-bf0989f17d43.json": {
+    "url": "https://meteo.report/var/data/forecasts/d84f35fa-b3dd-4172-b3ac-bf0989f17d43.json",
+    "downloaded_at": "2026-11-25T10:20:01+00:00",
+    "bytes": 13277,
+    "note": ""
+  },
+  "forecast/forecasts/db168a1a-c18a-4e83-b3c3-26a077856927.json": {
+    "url": "https://meteo.report/var/data/forecasts/db168a1a-c18a-4e83-b3c3-26a077856927.json",
+    "downloaded_at": "2026-11-25T10:20:01+00:00",
+    "bytes": 13221,
+    "note": ""
+  },
+  "forecast/forecasts/db8d25d3-f7e9-4cf7-8e98-dc57e6c40a11.json": {
+    "url": "https://meteo.report/var/data/forecasts/db8d25d3-f7e9-4cf7-8e98-dc57e6c40a11.json",
+    "downloaded_at": "2026-11-25T10:20:01+00:00",
+    "bytes": 13225,
+    "note": ""
+  },
+  "forecast/forecasts/dbbf9c7a-3453-4027-8f73-ae15d18b8e18.json": {
+    "url": "https://meteo.report/var/data/forecasts/dbbf9c7a-3453-4027-8f73-ae15d18b8e18.json",
+    "downloaded_at": "2026-11-25T10:20:02+00:00",
+    "bytes": 13236,
+    "note": ""
+  },
+  "forecast/forecasts/dc868eb0-95aa-4b6e-b7ed-b2dbf3b68509.json": {
+    "url": "https://meteo.report/var/data/forecasts/dc868eb0-95aa-4b6e-b7ed-b2dbf3b68509.json",
+    "downloaded_at": "2026-11-25T10:20:02+00:00",
+    "bytes": 13235,
+    "note": ""
+  },
+  "forecast/forecasts/df212b06-b41f-44cd-947b-90beffa068d0.json": {
+    "url": "https://meteo.report/var/data/forecasts/df212b06-b41f-44cd-947b-90beffa068d0.json",
+    "downloaded_at": "2026-11-25T10:20:02+00:00",
+    "bytes": 13230,
+    "note": ""
+  },
+  "forecast/forecasts/e0c04e2d-8221-48d3-92b9-56e26e743213.json": {
+    "url": "https://meteo.report/var/data/forecasts/e0c04e2d-8221-48d3-92b9-56e26e743213.json",
+    "downloaded_at": "2026-11-25T10:20:03+00:00",
+    "bytes": 13265,
+    "note": ""
+  },
+  "forecast/forecasts/e15540a9-eb29-446c-a76e-bf36af41e2ac.json": {
+    "url": "https://meteo.report/var/data/forecasts/e15540a9-eb29-446c-a76e-bf36af41e2ac.json",
+    "downloaded_at": "2026-11-25T10:20:03+00:00",
+    "bytes": 13280,
+    "note": ""
+  },
+  "forecast/forecasts/e312b687-6dcc-4b6e-8693-4276bb63ddad.json": {
+    "url": "https://meteo.report/var/data/forecasts/e312b687-6dcc-4b6e-8693-4276bb63ddad.json",
+    "downloaded_at": "2026-11-25T10:20:03+00:00",
+    "bytes": 13224,
+    "note": ""
+  },
+  "forecast/forecasts/e37d02f6-081c-40a6-a68a-ae3294c6c04a.json": {
+    "url": "https://meteo.report/var/data/forecasts/e37d02f6-081c-40a6-a68a-ae3294c6c04a.json",
+    "downloaded_at": "2026-11-25T10:20:03+00:00",
+    "bytes": 13255,
+    "note": ""
+  },
+  "forecast/forecasts/e3927cc1-1e18-48bf-bf7e-c8eeedb32348.json": {
+    "url": "https://meteo.report/var/data/forecasts/e3927cc1-1e18-48bf-bf7e-c8eeedb32348.json",
+    "downloaded_at": "2026-11-25T10:20:04+00:00",
+    "bytes": 13227,
+    "note": ""
+  },
+  "forecast/forecasts/e55526a6-bd80-478e-b484-387808f5746e.json": {
+    "url": "https://meteo.report/var/data/forecasts/e55526a6-bd80-478e-b484-387808f5746e.json",
+    "downloaded_at": "2026-11-25T10:20:04+00:00",
+    "bytes": 13257,
+    "note": ""
+  },
+  "forecast/forecasts/e5daca38-e869-4318-95a7-c8876f953773.json": {
+    "url": "https://meteo.report/var/data/forecasts/e5daca38-e869-4318-95a7-c8876f953773.json",
+    "downloaded_at": "2026-11-25T10:20:04+00:00",
+    "bytes": 13267,
+    "note": ""
+  },
+  "forecast/forecasts/ed52d336-4e85-40a4-bf6d-8ff3191962b2.json": {
+    "url": "https://meteo.report/var/data/forecasts/ed52d336-4e85-40a4-bf6d-8ff3191962b2.json",
+    "downloaded_at": "2026-11-25T10:20:05+00:00",
+    "bytes": 13273,
+    "note": ""
+  },
+  "forecast/forecasts/eed1a270-9d17-46ce-92d1-b1ee967ed96a.json": {
+    "url": "https://meteo.report/var/data/forecasts/eed1a270-9d17-46ce-92d1-b1ee967ed96a.json",
+    "downloaded_at": "2026-11-25T10:20:05+00:00",
+    "bytes": 13243,
+    "note": ""
+  },
+  "forecast/forecasts/f26db29f-6699-47fb-bd09-f6b151021187.json": {
+    "url": "https://meteo.report/var/data/forecasts/f26db29f-6699-47fb-bd09-f6b151021187.json",
+    "downloaded_at": "2026-11-25T10:20:05+00:00",
+    "bytes": 13268,
+    "note": ""
+  },
+  "forecast/forecasts/f448d23e-660e-4556-af4a-b78b5bd3ab24.json": {
+    "url": "https://meteo.report/var/data/forecasts/f448d23e-660e-4556-af4a-b78b5bd3ab24.json",
+    "downloaded_at": "2026-11-25T10:20:05+00:00",
+    "bytes": 13277,
+    "note": ""
+  },
+  "forecast/forecasts/f7552384-07ce-4946-b3fe-625fc704ad75.json": {
+    "url": "https://meteo.report/var/data/forecasts/f7552384-07ce-4946-b3fe-625fc704ad75.json",
+    "downloaded_at": "2026-11-25T10:20:06+00:00",
+    "bytes": 13261,
+    "note": ""
+  },
+  "forecast/forecasts/f911c3d8-7545-4738-96bc-2f7859674fb8.json": {
+    "url": "https://meteo.report/var/data/forecasts/f911c3d8-7545-4738-96bc-2f7859674fb8.json",
+    "downloaded_at": "2026-11-25T10:20:06+00:00",
+    "bytes": 13291,
+    "note": ""
+  },
+  "forecast/forecasts/fbb753cb-9afb-4090-a1f0-2e9531c0b60c.json": {
+    "url": "https://meteo.report/var/data/forecasts/fbb753cb-9afb-4090-a1f0-2e9531c0b60c.json",
+    "downloaded_at": "2026-11-25T10:20:06+00:00",
+    "bytes": 13305,
+    "note": ""
+  },
+  "forecast/mountains/14438ac2-9c39-474b-a239-8389a125035f.json": {
+    "url": "https://meteo.report/var/data/mountains/14438ac2-9c39-474b-a239-8389a125035f.json",
+    "downloaded_at": "2026-11-25T10:20:07+00:00",
+    "bytes": 13236,
+    "note": ""
+  },
+  "forecast/mountains/176eddd6-a68f-4c96-bd17-db797b950a9d.json": {
+    "url": "https://meteo.report/var/data/mountains/176eddd6-a68f-4c96-bd17-db797b950a9d.json",
+    "downloaded_at": "2026-11-25T10:20:07+00:00",
+    "bytes": 13449,
+    "note": ""
+  },
+  "forecast/mountains/1a2ebde1-ff88-463f-8acb-83c99969b1c3.json": {
+    "url": "https://meteo.report/var/data/mountains/1a2ebde1-ff88-463f-8acb-83c99969b1c3.json",
+    "downloaded_at": "2026-11-25T10:20:07+00:00",
+    "bytes": 13259,
+    "note": ""
+  },
+  "forecast/mountains/1f103edc-b70f-4894-a1e5-223f10cef2fa.json": {
+    "url": "https://meteo.report/var/data/mountains/1f103edc-b70f-4894-a1e5-223f10cef2fa.json",
+    "downloaded_at": "2026-11-25T10:20:08+00:00",
+    "bytes": 13460,
+    "note": ""
+  },
+  "forecast/mountains/29c8733c-5647-491e-a6d6-39c272bb696b.json": {
+    "url": "https://meteo.report/var/data/mountains/29c8733c-5647-491e-a6d6-39c272bb696b.json",
+    "downloaded_at": "2026-11-25T10:20:08+00:00",
+    "bytes": 13348,
+    "note": ""
+  },
+  "forecast/mountains/30b65728-b7f1-41b7-977d-42ae7798d081.json": {
+    "url": "https://meteo.report/var/data/mountains/30b65728-b7f1-41b7-977d-42ae7798d081.json",
+    "downloaded_at": "2026-11-25T10:20:08+00:00",
+    "bytes": 13378,
+    "note": ""
+  },
+  "forecast/mountains/338b1307-cc1b-4929-a503-46adbedb3a45.json": {
+    "url": "https://meteo.report/var/data/mountains/338b1307-cc1b-4929-a503-46adbedb3a45.json",
+    "downloaded_at": "2026-11-25T10:20:09+00:00",
+    "bytes": 13269,
+    "note": ""
+  },
+  "forecast/mountains/34f7d87c-8373-4fd9-a4ee-b1b73144e6a7.json": {
+    "url": "https://meteo.report/var/data/mountains/34f7d87c-8373-4fd9-a4ee-b1b73144e6a7.json",
+    "downloaded_at": "2026-11-25T10:20:09+00:00",
+    "bytes": 13381,
+    "note": ""
+  },
+  "forecast/mountains/3930b0dd-a14d-4658-84af-ec71df5e0bec.json": {
+    "url": "https://meteo.report/var/data/mountains/3930b0dd-a14d-4658-84af-ec71df5e0bec.json",
+    "downloaded_at": "2026-11-25T10:20:09+00:00",
+    "bytes": 13415,
+    "note": ""
+  },
+  "forecast/mountains/3ff421b6-233e-4f3a-970d-8456a66fa315.json": {
+    "url": "https://meteo.report/var/data/mountains/3ff421b6-233e-4f3a-970d-8456a66fa315.json",
+    "downloaded_at": "2026-11-25T10:20:10+00:00",
+    "bytes": 13314,
+    "note": ""
+  },
+  "forecast/mountains/47675c3a-a3bf-4768-ac0a-d03468732aa7.json": {
+    "url": "https://meteo.report/var/data/mountains/47675c3a-a3bf-4768-ac0a-d03468732aa7.json",
+    "downloaded_at": "2026-11-25T10:20:10+00:00",
+    "bytes": 13258,
+    "note": ""
+  },
+  "forecast/mountains/485df9c2-83df-4915-8e7e-31c02951303a.json": {
+    "url": "https://meteo.report/var/data/mountains/485df9c2-83df-4915-8e7e-31c02951303a.json",
+    "downloaded_at": "2026-11-25T10:20:10+00:00",
+    "bytes": 13285,
+    "note": ""
+  },
+  "forecast/mountains/4aaa7281-668a-4976-92cf-d2c051944020.json": {
+    "url": "https://meteo.report/var/data/mountains/4aaa7281-668a-4976-92cf-d2c051944020.json",
+    "downloaded_at": "2026-11-25T10:20:10+00:00",
+    "bytes": 13372,
+    "note": ""
+  },
+  "forecast/mountains/50a46311-6b79-4e96-99c1-90778bd736ea.json": {
+    "url": "https://meteo.report/var/data/mountains/50a46311-6b79-4e96-99c1-90778bd736ea.json",
+    "downloaded_at": "2026-11-25T10:20:11+00:00",
+    "bytes": 13324,
+    "note": ""
+  },
+  "forecast/mountains/5319ff48-49a3-4822-9891-2daeb06bff22.json": {
+    "url": "https://meteo.report/var/data/mountains/5319ff48-49a3-4822-9891-2daeb06bff22.json",
+    "downloaded_at": "2026-11-25T10:20:11+00:00",
+    "bytes": 13367,
+    "note": ""
+  },
+  "forecast/mountains/53c7a6bf-406e-4a69-a5a7-2a509b26e1ff.json": {
+    "url": "https://meteo.report/var/data/mountains/53c7a6bf-406e-4a69-a5a7-2a509b26e1ff.json",
+    "downloaded_at": "2026-11-25T10:20:11+00:00",
+    "bytes": 13269,
+    "note": ""
+  },
+  "forecast/mountains/553930e5-fe38-482a-9a86-e02591a3bc10.json": {
+    "url": "https://meteo.report/var/data/mountains/553930e5-fe38-482a-9a86-e02591a3bc10.json",
+    "downloaded_at": "2026-11-25T10:20:12+00:00",
+    "bytes": 13353,
+    "note": ""
+  },
+  "forecast/mountains/73fa7229-c343-4d22-80aa-68f460313c93.json": {
+    "url": "https://meteo.report/var/data/mountains/73fa7229-c343-4d22-80aa-68f460313c93.json",
+    "downloaded_at": "2026-11-25T10:20:12+00:00",
+    "bytes": 13286,
+    "note": ""
+  },
+  "forecast/mountains/90227b1b-f991-4442-aa73-86b9ae63e6d5.json": {
+    "url": "https://meteo.report/var/data/mountains/90227b1b-f991-4442-aa73-86b9ae63e6d5.json",
+    "downloaded_at": "2026-11-25T10:20:12+00:00",
+    "bytes": 13265,
+    "note": ""
+  },
+  "forecast/mountains/9937bca2-bec3-4e34-bbdf-4b17842c46f7.json": {
+    "url": "https://meteo.report/var/data/mountains/9937bca2-bec3-4e34-bbdf-4b17842c46f7.json",
+    "downloaded_at": "2026-11-25T10:20:13+00:00",
+    "bytes": 13435,
+    "note": ""
+  },
+  "forecast/mountains/9b24e990-6e5c-458f-88f6-085b86ad7ade.json": {
+    "url": "https://meteo.report/var/data/mountains/9b24e990-6e5c-458f-88f6-085b86ad7ade.json",
+    "downloaded_at": "2026-11-25T10:20:13+00:00",
+    "bytes": 13345,
+    "note": ""
+  },
+  "forecast/mountains/a2d361d8-cf6e-483f-ac37-443b5e5b1c3c.json": {
+    "url": "https://meteo.report/var/data/mountains/a2d361d8-cf6e-483f-ac37-443b5e5b1c3c.json",
+    "downloaded_at": "2026-11-25T10:20:13+00:00",
+    "bytes": 13268,
+    "note": ""
+  },
+  "forecast/mountains/b2dab299-d233-4413-b1a1-785b525c3863.json": {
+    "url": "https://meteo.report/var/data/mountains/b2dab299-d233-4413-b1a1-785b525c3863.json",
+    "downloaded_at": "2026-11-25T10:20:14+00:00",
+    "bytes": 13344,
+    "note": ""
+  },
+  "forecast/mountains/bb88707c-8212-4bf7-9308-aec2fceaa130.json": {
+    "url": "https://meteo.report/var/data/mountains/bb88707c-8212-4bf7-9308-aec2fceaa130.json",
+    "downloaded_at": "2026-11-25T10:20:14+00:00",
+    "bytes": 13335,
+    "note": ""
+  },
+  "forecast/mountains/c34ed7ed-1d12-4e5a-a719-f7dbf93aa816.json": {
+    "url": "https://meteo.report/var/data/mountains/c34ed7ed-1d12-4e5a-a719-f7dbf93aa816.json",
+    "downloaded_at": "2026-11-25T10:20:14+00:00",
+    "bytes": 13397,
+    "note": ""
+  },
+  "forecast/mountains/c5f8c52b-8926-4e87-8668-84f4854381e6.json": {
+    "url": "https://meteo.report/var/data/mountains/c5f8c52b-8926-4e87-8668-84f4854381e6.json",
+    "downloaded_at": "2026-11-25T10:20:14+00:00",
+    "bytes": 13270,
+    "note": ""
+  },
+  "forecast/mountains/d6e0fd37-d69a-4beb-9439-1e8bbe5ef57b.json": {
+    "url": "https://meteo.report/var/data/mountains/d6e0fd37-d69a-4beb-9439-1e8bbe5ef57b.json",
+    "downloaded_at": "2026-11-25T10:20:15+00:00",
+    "bytes": 13407,
+    "note": ""
+  },
+  "forecast/mountains/ebcc56d2-4560-4a31-a308-8dbb29999c10.json": {
+    "url": "https://meteo.report/var/data/mountains/ebcc56d2-4560-4a31-a308-8dbb29999c10.json",
+    "downloaded_at": "2026-11-25T10:20:15+00:00",
+    "bytes": 13232,
+    "note": ""
+  }
+}

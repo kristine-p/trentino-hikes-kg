@@ -1,0 +1,6 @@
+# Python packages for the whole project (one environment at the repo root, see README "Setup").
+# Add a package here, with a minimum version, when a script starts using it.
+
+# Phase 1 – information gathering: read the Parquet weather files (profile_data.py)
+pandas>=2.0
+pyarrow>=14.0

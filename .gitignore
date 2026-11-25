@@ -15,3 +15,7 @@ __pycache__/
 .ipynb_checkpoints/
 .venv/
 .DS_Store
+# Raw downloads: not committed, re-created with download_data.py (see its README).
+# The download log stays in the repo as the record of what was downloaded and when.
+Phase 1 - Purpose Definition/information_gathering/raw/*
+!Phase 1 - Purpose Definition/information_gathering/raw/download_log.json
